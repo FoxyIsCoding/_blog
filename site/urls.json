@@ -1,0 +1,50 @@
+{
+  "posts": [
+    "/welcome.html"
+  ],
+  "pages": [
+    "/._announce.html",
+    "/about.html",
+    "/pages.html"
+  ],
+  "tags": [],
+  "authors": [],
+  "series": [],
+  "streams": [
+    "/streams.html"
+  ],
+  "archives": [
+    "/archive-2026.html",
+    "/archive.html"
+  ],
+  "feeds": [
+    "/index.rss",
+    "/archive-2026.rss"
+  ],
+  "pagination": [
+    "/pages-1.html",
+    "/archive-2026-1.html"
+  ],
+  "file_mappings": [],
+  "misc": [
+    "/index.html"
+  ],
+  "summary": {
+    "posts": 1,
+    "pages": 3,
+    "tags": 0,
+    "authors": 0,
+    "series": 0,
+    "streams": 1,
+    "archives": 2,
+    "feeds": 2,
+    "pagination": 2,
+    "file_mappings": 0,
+    "misc": 1,
+    "total": 12,
+    "meta": {
+      "url": "",
+      "absolute_urls": false
+    }
+  }
+}
