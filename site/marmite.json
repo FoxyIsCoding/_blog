@@ -2,15 +2,15 @@
   "marmite_version": "0.2.7",
   "posts": 1,
   "pages": 2,
-  "generated_at": "2026-04-01 16:26:50.691674569 +02:00",
-  "timestamp": 1775053610,
-  "elapsed_time": 0.049196679,
+  "generated_at": "2026-04-01 19:10:48.113412681 +02:00",
+  "timestamp": 1775063448,
+  "elapsed_time": 0.05475437,
   "config": {
     "name": "blog",
     "tagline": "a silly blog page where i might post some stuff.. sometime...",
     "url": "",
     "https": null,
-    "footer": "<div>Powered by <a href=\"https://github.com/rochacbruno/marmite\">Marmite</a> | <small><a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC-BY_NC-SA</a></small></div>",
+    "footer": "<div> Weee | <small><a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC-BY_NC-SA</a></small></div>",
     "language": "",
     "pagination": 10,
     "pages_title": "Pages",
@@ -22,7 +22,7 @@
     "streams_content_title": "Posts from '$stream'",
     "series_title": "Series",
     "series_content_title": "Posts from '$series' series",
-    "default_author": "",
+    "default_author": "wiffle",
     "authors_title": "Authors",
     "enable_search": false,
     "enable_related_content": false,
@@ -51,7 +51,42 @@
       ]
     ],
     "extra": null,
-    "authors": {},
+    "authors": {
+      "wiffle": {
+        "name": "Wiffle :3",
+        "avatar": "https://github.com/foxyiscoding.png",
+        "bio": "Silly guy i suppose",
+        "links": [
+          [
+            "Fediverse",
+            "https://go.rocha.social/@bruno"
+          ],
+          [
+            "Github",
+            "https://github.com/rochacbruno"
+          ],
+          [
+            "Linkedin",
+            "https://www.linkedin.com/in/rochacbruno/"
+          ],
+          [
+            "Links",
+            "https://bruno.rocha.social"
+          ]
+        ]
+      },
+      "karlamagueta": {
+        "name": "Karla Magueta",
+        "avatar": "https://github.com/karlamagueta.png",
+        "bio": null,
+        "links": [
+          [
+            "Github",
+            "https://github.com/karlamagueta"
+          ]
+        ]
+      }
+    },
     "streams": {},
     "series": {},
     "toc": false,
@@ -69,7 +104,7 @@
     "publish_urls_json": true,
     "gallery_path": "gallery",
     "gallery_create_thumbnails": true,
-    "gallery_thumb_size": 50,
+    "gallery_thumb_size": 1000,
     "skip_image_resize": false
   }
 }

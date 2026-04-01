@@ -1,29 +1,45 @@
 {
   "posts": [
-    "/welcome.html"
+    "/installation.html"
   ],
   "pages": [
     "/._announce.html",
     "/about.html",
     "/pages.html"
   ],
-  "tags": [],
-  "authors": [],
+  "tags": [
+    "/tag-installation.html",
+    "/tag-guide.html",
+    "/tag-docs.html",
+    "/tags.html"
+  ],
+  "authors": [
+    "/author-wiffle.html",
+    "/authors.html"
+  ],
   "series": [],
   "streams": [
     "/streams.html"
   ],
   "archives": [
-    "/archive-2026.html",
+    "/archive-2025.html",
     "/archive.html"
   ],
   "feeds": [
     "/index.rss",
-    "/archive-2026.rss"
+    "/tag-installation.rss",
+    "/tag-guide.rss",
+    "/tag-docs.rss",
+    "/author-wiffle.rss",
+    "/archive-2025.rss"
   ],
   "pagination": [
     "/pages-1.html",
-    "/archive-2026-1.html"
+    "/tag-installation-1.html",
+    "/tag-guide-1.html",
+    "/tag-docs-1.html",
+    "/author-wiffle-1.html",
+    "/archive-2025-1.html"
   ],
   "file_mappings": [],
   "misc": [
@@ -32,16 +48,16 @@
   "summary": {
     "posts": 1,
     "pages": 3,
-    "tags": 0,
-    "authors": 0,
+    "tags": 4,
+    "authors": 2,
     "series": 0,
     "streams": 1,
     "archives": 2,
-    "feeds": 2,
-    "pagination": 2,
+    "feeds": 6,
+    "pagination": 6,
     "file_mappings": 0,
     "misc": 1,
-    "total": 12,
+    "total": 26,
     "meta": {
       "url": "",
       "absolute_urls": false

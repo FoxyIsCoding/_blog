@@ -1,1 +1,1 @@
-🏗️ This site is still work-in-progress!
+This site is still work-in-progress!

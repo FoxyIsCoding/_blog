@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/welcome.html</loc>
+    <loc>/installation.html</loc>
   </url>
   <url>
     <loc>/._announce.html</loc>
@@ -13,10 +13,28 @@
     <loc>/pages.html</loc>
   </url>
   <url>
+    <loc>/tag-installation.html</loc>
+  </url>
+  <url>
+    <loc>/tag-guide.html</loc>
+  </url>
+  <url>
+    <loc>/tag-docs.html</loc>
+  </url>
+  <url>
+    <loc>/tags.html</loc>
+  </url>
+  <url>
+    <loc>/author-wiffle.html</loc>
+  </url>
+  <url>
+    <loc>/authors.html</loc>
+  </url>
+  <url>
     <loc>/streams.html</loc>
   </url>
   <url>
-    <loc>/archive-2026.html</loc>
+    <loc>/archive-2025.html</loc>
   </url>
   <url>
     <loc>/archive.html</loc>
@@ -25,13 +43,37 @@
     <loc>/index.rss</loc>
   </url>
   <url>
-    <loc>/archive-2026.rss</loc>
+    <loc>/tag-installation.rss</loc>
+  </url>
+  <url>
+    <loc>/tag-guide.rss</loc>
+  </url>
+  <url>
+    <loc>/tag-docs.rss</loc>
+  </url>
+  <url>
+    <loc>/author-wiffle.rss</loc>
+  </url>
+  <url>
+    <loc>/archive-2025.rss</loc>
   </url>
   <url>
     <loc>/pages-1.html</loc>
   </url>
   <url>
-    <loc>/archive-2026-1.html</loc>
+    <loc>/tag-installation-1.html</loc>
+  </url>
+  <url>
+    <loc>/tag-guide-1.html</loc>
+  </url>
+  <url>
+    <loc>/tag-docs-1.html</loc>
+  </url>
+  <url>
+    <loc>/author-wiffle-1.html</loc>
+  </url>
+  <url>
+    <loc>/archive-2025-1.html</loc>
   </url>
   <url>
     <loc>/index.html</loc>

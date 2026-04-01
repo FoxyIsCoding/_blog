@@ -1,15 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog</title><link>http://</link><description>a silly blog page where i might post some stuff.. sometime...</description><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><lastBuildDate>Wed, 01 Apr 2026 14:26:50 GMT</lastBuildDate><generator>marmite</generator><item><title>Welcome to Marmite</title><link>http:///welcome.html</link><guid>http:///welcome.html</guid><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><source url="http://">index</source><content:encoded><![CDATA[<!-- Content Injected to every content markdown header -->
-<p>This is your first post!</p>
-<h2><a href="#edit-this-content" aria-hidden="true" class="anchor" id="edit-this-content"></a>Edit this content</h2>
-<p>edit on <code>content/{date}-welcome.md</code></p>
-<h2><a href="#add-more-content" aria-hidden="true" class="anchor" id="add-more-content"></a>Add more content</h2>
-<p>create new markdown files in the <code>content</code> folder</p>
-<p>use <code>marmite --new</code> to create new content</p>
-<h2><a href="#customize-your-site" aria-hidden="true" class="anchor" id="customize-your-site"></a>Customize your site</h2>
-<p>edit <code>marmite.yaml</code> to change site settings</p>
-<p>edit the files starting with <code>_</code> in the <code>content</code> folder to change the layout</p>
-<p>or edit the templates to create a custom layout</p>
-<h2><a href="#deploy-your-site" aria-hidden="true" class="anchor" id="deploy-your-site"></a>Deploy your site</h2>
-<p>read more on <a href="https://marmite.blog">marmite documentation</a></p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog</title><link>http://</link><description>a silly blog page where i might post some stuff.. sometime...</description><pubDate>Sat, 02 Aug 2025 18:02:50 GMT</pubDate><lastBuildDate>Wed, 01 Apr 2026 17:10:48 GMT</lastBuildDate><generator>marmite</generator><item><title>Installation</title><link>http:///installation.html</link><description><![CDATA["How to install Marmite - a fast, minimal static site generator"]]></description><author>wiffle</author><category>installation</category><category>docs</category><category>guide</category><guid>http:///installation.html</guid><pubDate>Sat, 02 Aug 2025 18:02:50 GMT</pubDate><source url="http://">index</source><content:encoded><![CDATA[<!-- Content Injected to every content markdown header -->
+<p>Marmite can be installed using various methods depending on your platform and preferences. Choose the method that works best for you.</p>
+<h2><a href="#quick-install-recommended" aria-hidden="true" class="anchor" id="quick-install-recommended"></a>Quick Install (Recommended)</h2>
+<p>The easiest way to install Marmite is using our automated install script:</p>
+<pre><code class="language-bash">curl -sS https://marmite.blog/install.sh | sh
+</code></pre>
+<p>This script will:</p>
+<ul>
+<li>Detect your operating system and architecture</li>
+<li>Download the appropriate binary for your system</li>
+<li>Install it to <code>~/.local/bin</code> (or a custom directory)</li>
+<li>Verify the installation</li>
+</ul>
+<h3><a href="#custom-installation-directory" aria-hidden="true" class="anchor" id="custom-installation-directory"></a>Custom Installation Directory</h3>
+<p>To install to a custom directory:</p>
+<pre><code class="language-bash">curl -sS https://marmite.blog/install.sh | sh -s -- --bin-dir /usr/local/bin
+</code></pre>
+<h3><a href="#environment-variables" aria-hidden="true" class="anchor" id="environment-variables"></a>Environment Variables</h3>
+<p>You can also use environment variables:</p>
+<pre><code class="language-bash">export MARMITE_BIN_DIR=/custom/path
+curl -sS https://marmite.blog/install.sh | sh
+</code></pre>
+<h2><a href="#install-from-pypi" aria-hidden="true" class="anchor" id="install-from-pypi"></a>Install from PyPI</h2>
+<p>Marmite is also released on Python Package Index</p>
+<pre><code class="language-bash">pip install marmite
+
+# OR without installation with uv
+uvx marmite
+</code></pre>
+<p>Check <a href="python-20installation-20with-20pip.html" data-wikilink="true">Python Installation with pip</a></p>
+<h2><a href="#install-from-source" aria-hidden="true" class="anchor" id="install-from-source"></a>Install from Source</h2>
+<p>If you have Rust installed, you can build Marmite from source:</p>
+<pre><code class="language-bash"># Install from crates.io
+cargo install marmite
+
+# Or install from GitHub
+cargo install --git https://github.com/rochacbruno/marmite
+
+# Or install using cargo-binstall to get the compiled binary via cargo
+cargo binstall marmite
+</code></pre>
+<h2><a href="#manual-installation" aria-hidden="true" class="anchor" id="manual-installation"></a>Manual Installation</h2>
+<ol>
+<li>
+<p>Download the appropriate binary for your platform from the <a href="https://github.com/rochacbruno/marmite/releases/latest">releases page</a></p>
+</li>
+<li>
+<p>Extract the archive:</p>
+<pre><code class="language-bash"># For Linux/macOS
+tar -xzf marmite-*.tar.gz
+
+# For Windows
+unzip marmite-*.zip
+</code></pre>
+</li>
+<li>
+<p>Move the binary to a directory in your PATH:</p>
+<pre><code class="language-bash"># Linux/macOS
+sudo mv marmite /usr/local/bin/
+
+# Or to user directory (no sudo required)
+mkdir -p ~/.local/bin
+mv marmite ~/.local/bin/
+</code></pre>
+</li>
+<li>
+<p>Make sure the binary is executable (Linux/macOS):</p>
+<pre><code class="language-bash">chmod +x /usr/local/bin/marmite
+</code></pre>
+</li>
+</ol>
+<h2><a href="#platform-specific-installation" aria-hidden="true" class="anchor" id="platform-specific-installation"></a>Platform-Specific Installation</h2>
+<h3><a href="#brew" aria-hidden="true" class="anchor" id="brew"></a>brew</h3>
+<pre><code class="language-bash">brew install marmite
+</code></pre>
+<h3><a href="#linux" aria-hidden="true" class="anchor" id="linux"></a>Linux</h3>
+<h4><a href="#arch-linux" aria-hidden="true" class="anchor" id="arch-linux"></a>Arch Linux</h4>
+<pre><code class="language-bash">yay -S marmite-bin
+</code></pre>
+<h3><a href="#freebsd" aria-hidden="true" class="anchor" id="freebsd"></a>FreeBSD</h3>
+<pre><code class="language-bash">pkg install marmite
+</code></pre>
+<p>For other Linux distributions, use the automated install script or download the binary manually from the releases page.</p>
+<h3><a href="#windows" aria-hidden="true" class="anchor" id="windows"></a>Windows</h3>
+<ol>
+<li>Download the Windows binary from the <a href="https://github.com/rochacbruno/marmite/releases/latest">releases page</a></li>
+<li>Extract the ZIP file</li>
+<li>Add the directory containing <code>marmite.exe</code> to your PATH</li>
+</ol>
+<p>Or use PowerShell:</p>
+<pre><code class="language-powershell">iwr -useb https://marmite.blog/install.ps1 | iex
+</code></pre>
+<h2><a href="#docker" aria-hidden="true" class="anchor" id="docker"></a>Docker</h2>
+<p>Run Marmite using Docker:</p>
+<pre><code class="language-bash">docker run -v $PWD:/input ghcr.io/rochacbruno/marmite
+# OR
+docker run -p 8000:8000 -v $PWD:/input ghcr.io/rochacbruno/marmite --serve
+</code></pre>
+<h2><a href="#verify-installation" aria-hidden="true" class="anchor" id="verify-installation"></a>Verify Installation</h2>
+<p>After installation, verify that Marmite is working:</p>
+<pre><code class="language-bash">marmite --version
+</code></pre>
+<p>You should see output like:</p>
+<pre><code>marmite 0.2.6
+</code></pre>
+<h2><a href="#updating-marmite" aria-hidden="true" class="anchor" id="updating-marmite"></a>Updating Marmite</h2>
+<p>To update to the latest version:</p>
+<h3><a href="#using-the-install-script" aria-hidden="true" class="anchor" id="using-the-install-script"></a>Using the install script</h3>
+<pre><code class="language-bash">curl -sS https://marmite.blog/install.sh | sh -s -- --force
+</code></pre>
+<h3><a href="#using-cargo" aria-hidden="true" class="anchor" id="using-cargo"></a>Using cargo</h3>
+<pre><code class="language-bash">cargo install --force marmite
+</code></pre>
+<h2><a href="#troubleshooting" aria-hidden="true" class="anchor" id="troubleshooting"></a>Troubleshooting</h2>
+<h3><a href="#command-not-found" aria-hidden="true" class="anchor" id="command-not-found"></a>Command not found</h3>
+<p>If you get a &quot;command not found&quot; error, make sure the installation directory is in your PATH:</p>
+<pre><code class="language-bash"># Add to ~/.bashrc or ~/.zshrc
+export PATH=&quot;$HOME/.local/bin:$PATH&quot;
+</code></pre>
+<p>Then reload your shell configuration:</p>
+<pre><code class="language-bash">source ~/.bashrc  # or ~/.zshrc
+</code></pre>
+<h3><a href="#permission-denied" aria-hidden="true" class="anchor" id="permission-denied"></a>Permission denied</h3>
+<p>If you get permission errors during installation:</p>
+<ul>
+<li>Use the <code>--bin-dir</code> option to install to a user-writable directory</li>
+<li>Or run the install command with <code>sudo</code> (not recommended)</li>
+</ul>
+<h3><a href="#ssltls-errors" aria-hidden="true" class="anchor" id="ssltls-errors"></a>SSL/TLS errors</h3>
+<p>If you encounter SSL errors when downloading:</p>
+<pre><code class="language-bash"># Use wget instead of curl
+wget -O- https://marmite.blog/install.sh | sh
+</code></pre>
+<h2><a href="#next-steps" aria-hidden="true" class="anchor" id="next-steps"></a>Next Steps</h2>
+<p>Once Marmite is installed, you can:</p>
+<ol>
+<li>
+<p>Create your first site:</p>
+<pre><code class="language-bash">marmite myblog --init-site --name &quot;My Blog&quot;
+</code></pre>
+</li>
+<li>
+<p>Create your first post:</p>
+<pre><code class="language-bash">marmite myblog --new &quot;Hello World&quot;
+</code></pre>
+</li>
+<li>
+<p>Build and serve your site:</p>
+<pre><code class="language-bash">marmite myblog --build --serve
+</code></pre>
+</li>
+</ol>
+<p>Check out the <a href="getting-started.html">Getting Started</a> guide for a complete tutorial!</p>
+<h2><a href="#uninstalling" aria-hidden="true" class="anchor" id="uninstalling"></a>Uninstalling</h2>
+<p>To uninstall Marmite:</p>
+<pre><code class="language-bash"># If installed with the script
+rm ~/.local/bin/marmite
+
+# If installed with cargo
+cargo uninstall marmite
+
+# If installed manually
+rm /usr/local/bin/marmite
+</code></pre>
+<h1><a href="#test-for-gallery" aria-hidden="true" class="anchor" id="test-for-gallery"></a>test for gallery</h1>
+<!-- .gallery path=test20 -->
 <!-- Content Injected to every content markdown footer -->
 ]]></content:encoded></item></channel></rss>

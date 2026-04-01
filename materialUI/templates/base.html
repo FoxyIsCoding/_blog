@@ -13,6 +13,10 @@
     <!-- Theme Stylesheets -->
     <!-- Add your custom CSS in static/style.css -->
     <link rel="stylesheet" type="text/css" href="{{url_for(path='static/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Colorscheme - Configure in marmite.yaml with extra: colorscheme: nord -->
     {% if site.extra.colorscheme %}
     <link rel="stylesheet" type="text/css" href="{{url_for(path='static/colorschemes/' ~ site.extra.colorscheme ~ '.css')}}">
@@ -67,6 +71,7 @@
                     <a href="{{url_for(path='')}}" class="p-name u-url">{% if site.logo_image %}<img src="{{url_for(path=site.logo_image)}}" alt="{{ site.name }}" class="u-photo">{% else %}{{ site.name }}{% endif %}</a>
                 </h1>
 
+                
                 <!-- Site Tagline -->
                 {% if site.tagline %}
                 <p class="site-tagline p-note">{{ site.tagline }}</p>
@@ -81,11 +86,30 @@
                     {% for item in menu %}
                     {% set name = item.0 %}
                     {% set url = item.1 %}
+                    {% if url is starting_with("http") %}
+                    {% set nav_variant = "external" %}
+                    {% set nav_icon = "open_in_new" %}
+                    {% elif url == "" or url == "/" or url == "index" or url == "index.html" %}
+                    {% set nav_variant = "home" %}
+                    {% set nav_icon = "home" %}
+                    {% elif "about" in url %}
+                    {% set nav_variant = "about" %}
+                    {% set nav_icon = "article" %}
+                    {% elif "archive" in url %}
+                    {% set nav_variant = "archive" %}
+                    {% set nav_icon = "archive" %}
+                    {% elif "tag" in url %}
+                    {% set nav_variant = "tags" %}
+                    {% set nav_icon = "local_offer" %}
+                    {% else %}
+                    {% set nav_variant = "page" %}
+                    {% set nav_icon = "article" %}
+                    {% endif %}
                     <li>
                         {% if current_page and current_page == url %}
-                        <span class="nav-item active">{{name}}</span>
+                        <span class="nav-item nav-item--{{ nav_variant }} active"><span class="material-icons nav-icon" aria-hidden="true">{{ nav_icon }}</span><span class="nav-label">{{name}}</span></span>
                         {% else %}
-                        <a class="nav-item" {% if url is starting_with("http") %} href="{{url}}" target="_blank" {% else %} href="{{url_for(path=url)}}"{% endif %}>{{ name }}</a>
+                        <a class="nav-item nav-item--{{ nav_variant }}" {% if url is starting_with("http") %} href="{{url}}" target="_blank" {% else %} href="{{url_for(path=url)}}"{% endif %}><span class="material-icons nav-icon" aria-hidden="true">{{ nav_icon }}</span><span class="nav-label">{{ name }}</span></a>
                         {% endif %}
                     </li>
                     {% endfor %}
@@ -94,7 +118,7 @@
                     <!-- Enable search in marmite.yaml with enable_search: true -->
                     {% if site.enable_search %}
                     <li class="search-toggle">
-                        <button id="search-toggle">Search</button>
+                        <button id="search-toggle"><span class="material-icons search-icon" aria-hidden="true">search</span><span>Search</span></button>
                     </li>
                     {% endif %}
                     <!-- Color Mode Toggle -->
@@ -115,7 +139,8 @@
             {{ hero }}
         </section>
         {% endif %}
-
+   
+        
         <!-- Main Content -->
         <!-- This is where page/post content will be rendered -->
         <main class="main-content">
@@ -144,8 +169,10 @@
                 colorscheme: <select name="colorscheme" class="colorscheme-toggle"><option value="default">default</option></select>
                 <span class="theme-toggle" title="dark mode">&#9789;</span>
             </div>
+            
             {% endif %}
         </footer>
+        
         {% endif %}
 
         <!-- Search Overlay -->

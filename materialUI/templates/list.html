@@ -63,6 +63,13 @@
         {% endif %}
 
         <header class="item-header">
+            {# Item Date #}
+            {% if item.date %}
+            <time class="item-date" datetime="{{ item.date | date(format='%+') }}">
+                {{ item.date | date(format='%b %e') | upper }}
+            </time>
+            {% endif %}
+
             {# Item Title #}
             <h2 class="item-title">
                 <a href="{{url_for(path=item.slug ~ '.html')}}">{{ item.title }}</a>
@@ -70,23 +77,6 @@
 
             {# Item Metadata (for posts with dates) #}
             {% if item.date %}
-            <div class="item-meta">
-                <time class="item-date" datetime="{{ item.date | date(format='%+') }}">
-                    {{ item.date | default_date_format }}
-                </time>
-
-                {# Authors with IndieWeb h-card #}
-                {% if item.authors %}
-                <div class="item-authors">
-                    by
-                    {% for author in item.authors %}
-                    {% set slug = "author-" ~ author | trim | slugify %}
-                    {% set link = slug ~ ".html"%}
-                    <span class="h-card p-author"><a href="{{url_for(path=link)}}" class="item-author p-name u-url">{{ author }}</a></span>{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
             {% endif %}
         </header>
 
@@ -117,7 +107,10 @@
 
             {# Read More Link #}
             <div class="item-read-more">
-                <a href="{{url_for(path=item.slug ~ '.html')}}" class="read-more-link">Read more →</a>
+                <a href="{{url_for(path=item.slug ~ '.html')}}" class="read-more-link">
+                    <span>View article</span>
+                    <span class="material-icons read-more-icon" aria-hidden="true">arrow_forward</span>
+                </a>
             </div>
         </footer>
     </article>

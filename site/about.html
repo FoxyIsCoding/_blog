@@ -13,6 +13,10 @@
     <!-- Theme Stylesheets -->
     <!-- Add your custom CSS in static/style.css -->
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Colorscheme - Configure in marmite.yaml with extra: colorscheme: nord -->
     
     <!-- Custom CSS - Add custom.css in your site root to override theme styles -->
@@ -52,7 +56,11 @@ Hi, edit about.md to change this content.
 
 ",
     
-    
+    "author": {
+        "@type": "Person",
+        "name": "Wiffle :3",
+        "url": "/author-wiffle.html",
+    },
     "publisher": {
         "@type": "Organization",
         "name": "blog",
@@ -70,7 +78,11 @@ Hi, edit about.md to change this content.
     <!-- Auto-generated RSS feeds for your content -->
     
         <link rel="alternate" type="application/rss+xml" title="index" href="/index.rss">
-    <link rel="alternate" type="application/rss+xml" title="year: 2026" href="/archive-2026.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: guide" href="/tag-guide.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: installation" href="/tag-installation.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: docs" href="/tag-docs.rss">
+    <link rel="alternate" type="application/rss+xml" title="author: wiffle" href="/author-wiffle.rss">
+    <link rel="alternate" type="application/rss+xml" title="year: 2025" href="/archive-2025.rss">
     
 
     
@@ -97,6 +109,7 @@ Hi, edit about.md to change this content.
                     <a href="/" class="p-name u-url">blog</a>
                 </h1>
 
+                
                 <!-- Site Tagline -->
                 
                 <p class="site-tagline p-note">a silly blog page where i might post some stuff.. sometime...</p>
@@ -111,25 +124,37 @@ Hi, edit about.md to change this content.
                     
                     
                     
+                    
+                    
+                    
+                    
                     <li>
                         
-                        <a class="nav-item"  href="/tags.html">Tags</a>
+                        <a class="nav-item nav-item--tags"  href="/tags.html"><span class="material-icons nav-icon" aria-hidden="true">local_offer</span><span class="nav-label">Tags</span></a>
                         
                     </li>
                     
                     
                     
+                    
+                    
+                    
+                    
                     <li>
                         
-                        <a class="nav-item"  href="/archive.html">Archive</a>
+                        <a class="nav-item nav-item--archive"  href="/archive.html"><span class="material-icons nav-icon" aria-hidden="true">archive</span><span class="nav-label">Archive</span></a>
                         
                     </li>
                     
                     
                     
+                    
+                    
+                    
+                    
                     <li>
                         
-                        <a class="nav-item"  href="/authors.html">Authors</a>
+                        <a class="nav-item nav-item--page"  href="/authors.html"><span class="material-icons nav-icon" aria-hidden="true">article</span><span class="nav-label">Authors</span></a>
                         
                     </li>
                     
@@ -149,7 +174,8 @@ Hi, edit about.md to change this content.
         <!-- Hero Section -->
         <!-- Create content/_hero.md to add a hero section -->
         
-
+   
+        
         <!-- Main Content -->
         <!-- This is where page/post content will be rendered -->
         <main class="main-content">
@@ -202,20 +228,6 @@ Hi, edit about.md to change this content.
 
 
 
-<section class="content-comments">
-    <h5><a href="#comments" aria-hidden="true" class="anchor" id="comments"></a>Comments</h5>
-<p><strong>edit <code>content/_comments.md</code> to adjust for your own site/repo</strong></p>
-<p><strong>remove</strong> the file to disable comments</p>
-<script src='https://utteranc.es/client.js'
-repo='rochacbruno/issue-bin'
-issue-term='pathname'
-theme='preferred-color-scheme'
-crossorigin='anonymous'
-async>
-</script>
-
-</section>
-
 
 
 
@@ -231,11 +243,12 @@ async>
         <!-- Customize footer by creating content/_footer.md -->
         
         <footer class="site-footer">
-            <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
+            <div> Weee | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
             <!-- Colorscheme Toggle -->
             <!-- Enable in marmite.yaml with extra: colorscheme_toggle: true -->
             
         </footer>
+        
         
 
         <!-- Search Overlay -->

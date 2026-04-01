@@ -169,6 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle (if you add a mobile menu)
     initializeMobileMenu();
     
+    // Gallery thumbnail drag scrolling
+    initializeGalleryThumbnailScroll();
+
     // Smooth scrolling for anchor links
     initializeSmoothScroll();
     
@@ -288,6 +291,101 @@ function initializeExternalLinks() {
                 link.appendChild(indicator);
             }
         }
+    });
+}
+
+/**
+ * Initialize draggable gallery thumbnail scrolling
+ */
+function initializeGalleryThumbnailScroll() {
+    const galleryTracks = document.querySelectorAll('.gallery-thumbnail-scroll');
+
+    galleryTracks.forEach((track) => {
+        if (track.dataset.dragScrollInitialized === 'true') {
+            return;
+        }
+
+        track.dataset.dragScrollInitialized = 'true';
+
+        // Force scrollable behavior even when gallery markup injects inline styles.
+        track.style.overflowX = 'auto';
+        track.style.overflowY = 'hidden';
+        track.style.whiteSpace = 'nowrap';
+        track.style.scrollBehavior = 'smooth';
+
+        let isDragging = false;
+        let hasMoved = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+
+        const pointerPosition = (event) => (event.touches && event.touches.length ? event.touches[0].pageX : event.pageX);
+
+        const beginDrag = (event) => {
+            if (event.button !== undefined && event.button !== 0) {
+                return;
+            }
+
+            isDragging = true;
+            hasMoved = false;
+            startX = pointerPosition(event);
+            startScrollLeft = track.scrollLeft;
+            track.classList.add('is-dragging');
+
+            if (track.setPointerCapture && event.pointerId !== undefined) {
+                try {
+                    track.setPointerCapture(event.pointerId);
+                } catch (error) {
+                    // Ignore capture errors when the pointer is already captured elsewhere.
+                }
+            }
+        };
+
+        const moveDrag = (event) => {
+            if (!isDragging) {
+                return;
+            }
+
+            event.preventDefault();
+            const currentX = pointerPosition(event);
+            const distance = currentX - startX;
+
+            if (Math.abs(distance) > 4) {
+                hasMoved = true;
+            }
+
+            track.scrollLeft = startScrollLeft - distance;
+        };
+
+        const endDrag = () => {
+            isDragging = false;
+            track.classList.remove('is-dragging');
+        };
+
+        track.addEventListener('pointerdown', beginDrag);
+        track.addEventListener('pointermove', moveDrag);
+        track.addEventListener('pointerup', endDrag);
+        track.addEventListener('pointercancel', endDrag);
+        track.addEventListener('pointerleave', endDrag);
+        track.addEventListener('dragstart', (event) => event.preventDefault());
+
+        track.addEventListener('wheel', (event) => {
+            if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) {
+                return;
+            }
+
+            event.preventDefault();
+            track.scrollLeft += event.deltaY;
+        }, { passive: false });
+
+        track.addEventListener('click', (event) => {
+            if (!hasMoved) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+            hasMoved = false;
+        }, true);
     });
 }
 

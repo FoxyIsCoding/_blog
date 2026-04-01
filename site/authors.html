@@ -12,6 +12,10 @@
     <!-- Theme Stylesheets -->
     <!-- Add your custom CSS in static/style.css -->
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Colorscheme - Configure in marmite.yaml with extra: colorscheme: nord -->
     
     <!-- Custom CSS - Add custom.css in your site root to override theme styles -->
@@ -31,7 +35,11 @@
     <!-- Auto-generated RSS feeds for your content -->
     
         <link rel="alternate" type="application/rss+xml" title="index" href="/index.rss">
-    <link rel="alternate" type="application/rss+xml" title="year: 2026" href="/archive-2026.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: installation" href="/tag-installation.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: guide" href="/tag-guide.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: docs" href="/tag-docs.rss">
+    <link rel="alternate" type="application/rss+xml" title="author: wiffle" href="/author-wiffle.rss">
+    <link rel="alternate" type="application/rss+xml" title="year: 2025" href="/archive-2025.rss">
     
 
     
@@ -58,6 +66,7 @@
                     <a href="/" class="p-name u-url">blog</a>
                 </h1>
 
+                
                 <!-- Site Tagline -->
                 
                 <p class="site-tagline p-note">a silly blog page where i might post some stuff.. sometime...</p>
@@ -72,25 +81,37 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     <li>
                         
-                        <a class="nav-item"  href="/tags.html">Tags</a>
+                        <a class="nav-item nav-item--tags"  href="/tags.html"><span class="material-icons nav-icon" aria-hidden="true">local_offer</span><span class="nav-label">Tags</span></a>
                         
                     </li>
                     
                     
                     
+                    
+                    
+                    
+                    
                     <li>
                         
-                        <a class="nav-item"  href="/archive.html">Archive</a>
+                        <a class="nav-item nav-item--archive"  href="/archive.html"><span class="material-icons nav-icon" aria-hidden="true">archive</span><span class="nav-label">Archive</span></a>
                         
                     </li>
                     
                     
                     
+                    
+                    
+                    
+                    
                     <li>
                         
-                        <span class="nav-item active">Authors</span>
+                        <span class="nav-item nav-item--page active"><span class="material-icons nav-icon" aria-hidden="true">article</span><span class="nav-label">Authors</span></span>
                         
                     </li>
                     
@@ -110,7 +131,8 @@
         <!-- Hero Section -->
         <!-- Create content/_hero.md to add a hero section -->
         
-
+   
+        
         <!-- Main Content -->
         <!-- This is where page/post content will be rendered -->
         <main class="main-content">
@@ -125,6 +147,33 @@
 <section class="groups-list h-feed">
     <h1 class="p-name" style="display: none;">Authors</h1>
 
+    
+    
+    <div class="group-item">
+        <h2 class="group-name">
+            
+            
+            
+            
+            
+            <a href="/author-wiffle.html">
+
+<img src="https://github.com/foxyiscoding.png" alt="Wiffle :3" class="avatar u-photo">
+wiffle</a>
+        </h2>
+        <span class="group-count">1 post</span>
+        <div class="group-preview">
+            
+            
+            <div class="group-preview-item h-entry">
+                <a href="/installation.html" class="group-preview-link u-url p-name">Installation</a>
+                
+                <small class="group-preview-date"><time class="dt-published" datetime="2025-08-02T18:02:50+00:00">August 2025</time></small>
+                
+            </div>
+            
+        </div>
+    </div>
     
 </section>
 
@@ -144,11 +193,12 @@
         <!-- Customize footer by creating content/_footer.md -->
         
         <footer class="site-footer">
-            <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
+            <div> Weee | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
             <!-- Colorscheme Toggle -->
             <!-- Enable in marmite.yaml with extra: colorscheme_toggle: true -->
             
         </footer>
+        
         
 
         <!-- Search Overlay -->

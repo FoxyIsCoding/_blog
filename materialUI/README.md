@@ -39,22 +39,13 @@ The theme uses a flexible layout system. You can customize:
 
 ### Typography
 
-The theme includes the accessible Atkinson Hyperlegible font for better readability:
+The theme now uses Google Fonts' Roboto family for a Material-style appearance, plus Material Icons for UI glyphs.
 
 ```css
-@font-face {
-  font-family: "Atkinson Hyperlegible";
-  src: url("./Atkinson-Hyperlegible-Regular-102.woff");
-}
+font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 ```
 
-It also uses system fonts as fallback for fast loading:
-
-```css
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-```
-
-You can change the font settings in `static/style.css` or add additional web fonts.
+You can change the font settings in `static/style.css` or replace the Google Fonts links in `templates/base.html`.
 
 ### JavaScript
 
@@ -162,7 +153,7 @@ To customize the theme further:
 2. **JavaScript**: Edit `static/script.js`  
 3. **Templates**: Modify files in `templates/`
 4. **Assets**: Replace or add images, fonts, etc. in `static/`
-5. **Fonts**: The theme includes Atkinson Hyperlegible font, or you can add your own
+5. **Fonts**: The theme uses Google Fonts (Roboto) and Material Icons by default
 
 ## Browser Support
 
@@ -179,7 +170,7 @@ The theme is optimized for performance:
 
 - **CSS**: Single file with CSS custom properties for easy theming
 - **JavaScript**: Minimal, focused functionality
-- **Web font**: Single Atkinson Hyperlegible font file (~40KB) for accessibility
+- **Web fonts**: Google Fonts Roboto and Material Icons
 - **System fonts**: Used as fallback for fast loading
 - **No external dependencies** (except for search.js from Marmite)
 - **Embedded assets**: All theme files are embedded in Marmite binary
