@@ -1,4 +1,4 @@
 {
-  "buildCommand": "uv pip install marmite && marmite . site",
+  "buildCommand": "uv pip install --system marmite && marmite . site",
   "outputDirectory": "site"
 }
