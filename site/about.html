@@ -9,18 +9,20 @@
 
     <title>About | blog</title>
     <!-- Favicon - Place your favicon.ico in static folder -->
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/_blog/static/favicon.ico">
     <!-- Theme Stylesheets -->
     <!-- Add your custom CSS in static/style.css -->
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/_blog/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Colorscheme - Configure in marmite.yaml with extra: colorscheme: nord -->
     
     <!-- Custom CSS - Add custom.css in your site root to override theme styles -->
-    <link rel="stylesheet" type="text/css" href="/static/custom.css">
+    <link rel="stylesheet" type="text/css" href="/_blog/static/custom.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css" id="highlightjs-theme" />
 
 
@@ -37,9 +39,13 @@ Hi, edit about.md to change this content.
 ">
 
 
+<meta property="og:url" content="https://foxyiscoding.github.io/_blog/about.html">
+
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="blog">
 
+
+<meta property="article:author" content="https://foxyiscoding.github.io/_blog/author-wiffle.html">
 
 
 <script type="application/ld+json">
@@ -48,9 +54,9 @@ Hi, edit about.md to change this content.
     "@type": "BlogPosting",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/about.html"
+        "@id": "https://foxyiscoding.github.io/_blog/about.html"
     },
-    "url": "/about.html",
+    "url": "https://foxyiscoding.github.io/_blog/about.html",
     "headline": "About",
     "description": "Hi, edit about.md to change this content.
 
@@ -58,15 +64,15 @@ Hi, edit about.md to change this content.
     
     "author": {
         "@type": "Person",
-        "name": "Wiffle :3",
-        "url": "/author-wiffle.html",
+        "name": "Wiffle",
+        "url": "https://foxyiscoding.github.io/_blog/author-wiffle.html",
     },
     "publisher": {
         "@type": "Organization",
         "name": "blog",
         "logo": {
             "@type": "ImageObject",
-            "url": "/"
+            "url": "https://foxyiscoding.github.io/_blog/"
         }
     },
     
@@ -77,12 +83,21 @@ Hi, edit about.md to change this content.
     <!-- RSS Feeds -->
     <!-- Auto-generated RSS feeds for your content -->
     
-        <link rel="alternate" type="application/rss+xml" title="index" href="/index.rss">
-    <link rel="alternate" type="application/rss+xml" title="tag: guide" href="/tag-guide.rss">
-    <link rel="alternate" type="application/rss+xml" title="tag: installation" href="/tag-installation.rss">
-    <link rel="alternate" type="application/rss+xml" title="tag: docs" href="/tag-docs.rss">
-    <link rel="alternate" type="application/rss+xml" title="author: wiffle" href="/author-wiffle.rss">
-    <link rel="alternate" type="application/rss+xml" title="year: 2025" href="/archive-2025.rss">
+        <link rel="alternate" type="application/rss+xml" title="index" href="/_blog/index.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: docs" href="/_blog/tag-docs.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: gfm" href="/_blog/tag-gfm.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: hackclub" href="/_blog/tag-hackclub.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: markdown" href="/_blog/tag-markdown.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: common-mark" href="/_blog/tag-common-mark.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: guide" href="/_blog/tag-guide.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: installation" href="/_blog/tag-installation.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: GFM" href="/_blog/tag-gfm.rss">
+    <link rel="alternate" type="application/rss+xml" title="tag: Common Mark" href="/_blog/tag-common-mark.rss">
+    <link rel="alternate" type="application/rss+xml" title="author: wiffle" href="/_blog/author-wiffle.rss">
+    <link rel="alternate" type="application/rss+xml" title="author: marmite" href="/_blog/author-marmite.rss">
+    <link rel="alternate" type="application/rss+xml" title="year: 2026" href="/_blog/archive-2026.rss">
+    <link rel="alternate" type="application/rss+xml" title="year: 2025" href="/_blog/archive-2025.rss">
+    <link rel="alternate" type="application/rss+xml" title="year: 2024" href="/_blog/archive-2024.rss">
     
 
     
@@ -93,7 +108,7 @@ Hi, edit about.md to change this content.
     <!-- Use content/_htmlhead.md to inject custom HTML here -->
     
 </head>
-<body>
+<body class="page-about">
     <!-- Announcement Bar -->
     <!-- Create content/_announce.md to display site announcements -->
     
@@ -106,7 +121,7 @@ Hi, edit about.md to change this content.
             <!-- Site Title with IndieWeb h-card -->
             <div class="h-card">
                 <h1 class="site-title">
-                    <a href="/" class="p-name u-url">blog</a>
+                    <a href="/_blog/" class="p-name u-url">blog</a>
                 </h1>
 
                 
@@ -130,7 +145,7 @@ Hi, edit about.md to change this content.
                     
                     <li>
                         
-                        <a class="nav-item nav-item--tags"  href="/tags.html"><span class="material-icons nav-icon" aria-hidden="true">local_offer</span><span class="nav-label">Tags</span></a>
+                        <a class="nav-item nav-item--tags"  href="/_blog/tags.html"><span class="material-icons nav-icon" aria-hidden="true">local_offer</span><span class="nav-label">Tags</span></a>
                         
                     </li>
                     
@@ -142,7 +157,7 @@ Hi, edit about.md to change this content.
                     
                     <li>
                         
-                        <a class="nav-item nav-item--archive"  href="/archive.html"><span class="material-icons nav-icon" aria-hidden="true">archive</span><span class="nav-label">Archive</span></a>
+                        <a class="nav-item nav-item--archive"  href="/_blog/archive.html"><span class="material-icons nav-icon" aria-hidden="true">archive</span><span class="nav-label">Archive</span></a>
                         
                     </li>
                     
@@ -154,7 +169,7 @@ Hi, edit about.md to change this content.
                     
                     <li>
                         
-                        <a class="nav-item nav-item--page"  href="/authors.html"><span class="material-icons nav-icon" aria-hidden="true">article</span><span class="nav-label">Authors</span></a>
+                        <a class="nav-item nav-item--page"  href="/_blog/authors.html"><span class="material-icons nav-icon" aria-hidden="true">article</span><span class="nav-label">Authors</span></a>
                         
                     </li>
                     
@@ -188,7 +203,7 @@ Hi, edit about.md to change this content.
 
 <article class="content-article h-entry">
     <data class="p-name" value="About"></data>
-    <a class="u-url" href="/about.html" style="display: none;"></a>
+    <a class="u-url" href="/_blog/about.html" style="display: none;"></a>
     
     
     
@@ -198,6 +213,44 @@ Hi, edit about.md to change this content.
         <h1 class="content-title">About</h1>
 
         
+        
+        
+        
+        
+
+        <div class="content-meta">
+            <div class="content-meta-top">
+                
+
+                
+            </div>
+
+            
+            
+            <div class="content-authors-row">
+                
+                
+                
+                
+                
+                
+                
+                
+                <span class="h-card p-author">
+                    <a href="/_blog/author-wiffle.html" class="item-author p-name u-url">
+                        <img src="/_blog/media/avatars/wiffle.png" alt="Wiffle" class="content-author-avatar u-photo">
+                        <span class="content-author-text">
+                            <span class="content-author-name">Wiffle</span>
+                            
+                            <span class="content-author-bio p-note">Silly guy i suppose</span>
+                            
+                        </span>
+                    </a>
+                </span>
+                
+            </div>
+            
+        </div>
         
     </header>
 
@@ -243,7 +296,18 @@ Hi, edit about.md to change this content.
         <!-- Customize footer by creating content/_footer.md -->
         
         <footer class="site-footer">
-            <div> Weee | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
+            
+            <div class="author-links site-footer-links" aria-label="Footer links">
+                <a href="https://github.com/foxyiscoding" target="_blank" rel="noopener noreferrer" class="author-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://foxyiscoding.github.io/_blog/" target="_blank" rel="noopener noreferrer" class="author-link" aria-label="Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://discord.com/users/830732127984549929" target="_blank" rel="noopener noreferrer" class="author-link" aria-label="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
             <!-- Colorscheme Toggle -->
             <!-- Enable in marmite.yaml with extra: colorscheme_toggle: true -->
             
@@ -260,9 +324,9 @@ Hi, edit about.md to change this content.
     <!-- Add your custom JavaScript in static/script.js -->
     
 
-    <script src="/static/script.js"></script>
+    <script src="/_blog/static/script.js"></script>
     <!-- Custom JavaScript - Add custom.js in your site root to override theme scripts -->
-    <script src="/static/custom.js"></script>
+    <script src="/_blog/static/custom.js"></script>
     
     
     

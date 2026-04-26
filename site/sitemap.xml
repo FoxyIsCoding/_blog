@@ -1,81 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/installation.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/hello-hackclub.html</loc>
   </url>
   <url>
-    <loc>/._announce.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/installation.html</loc>
   </url>
   <url>
-    <loc>/about.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/why-to-use-marmite.html</loc>
   </url>
   <url>
-    <loc>/pages.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/markdown-format.html</loc>
   </url>
   <url>
-    <loc>/tag-installation.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/._announce.html</loc>
   </url>
   <url>
-    <loc>/tag-guide.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/about.html</loc>
   </url>
   <url>
-    <loc>/tag-docs.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/pages.html</loc>
   </url>
   <url>
-    <loc>/tags.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-docs.html</loc>
   </url>
   <url>
-    <loc>/author-wiffle.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-gfm.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-hackclub.html</loc>
   </url>
   <url>
-    <loc>/streams.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-markdown.html</loc>
   </url>
   <url>
-    <loc>/archive-2025.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-common-mark.html</loc>
   </url>
   <url>
-    <loc>/archive.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-guide.html</loc>
   </url>
   <url>
-    <loc>/index.rss</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-installation.html</loc>
   </url>
   <url>
-    <loc>/tag-installation.rss</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tags.html</loc>
   </url>
   <url>
-    <loc>/tag-guide.rss</loc>
+    <loc>https://foxyiscoding.github.io/_blog/author-marmite.html</loc>
   </url>
   <url>
-    <loc>/tag-docs.rss</loc>
+    <loc>https://foxyiscoding.github.io/_blog/author-wiffle.html</loc>
   </url>
   <url>
-    <loc>/author-wiffle.rss</loc>
+    <loc>https://foxyiscoding.github.io/_blog/authors.html</loc>
   </url>
   <url>
-    <loc>/archive-2025.rss</loc>
+    <loc>https://foxyiscoding.github.io/_blog/streams.html</loc>
   </url>
   <url>
-    <loc>/pages-1.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2026.html</loc>
   </url>
   <url>
-    <loc>/tag-installation-1.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2025.html</loc>
   </url>
   <url>
-    <loc>/tag-guide-1.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2024.html</loc>
   </url>
   <url>
-    <loc>/tag-docs-1.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/archive.html</loc>
   </url>
   <url>
-    <loc>/author-wiffle-1.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/index.rss</loc>
   </url>
   <url>
-    <loc>/archive-2025-1.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-docs.rss</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://foxyiscoding.github.io/_blog/tag-gfm.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-hackclub.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-markdown.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-common-mark.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-guide.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-installation.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/author-marmite.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/author-wiffle.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2026.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2025.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2024.rss</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/pages-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-docs-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-gfm-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-hackclub-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-markdown-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-common-mark-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-guide-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/tag-installation-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/author-marmite-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/author-wiffle-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2026-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2025-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/archive-2024-1.html</loc>
+  </url>
+  <url>
+    <loc>https://foxyiscoding.github.io/_blog/index.html</loc>
   </url>
 </urlset>

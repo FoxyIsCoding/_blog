@@ -1,6 +1,6 @@
 name: blog
 tagline: a silly blog page where i might post some stuff.. sometime...
-url: ''
+url: https://foxyiscoding.github.io/_blog
 https: null
 footer: <div> Weee | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
 language: ''
@@ -17,19 +17,17 @@ series_content_title: Posts from '$series' series
 default_author: wiffle
 authors:
   wiffle:
-    name: Wiffle :3
-    avatar: https://github.com/foxyiscoding.png
+    name: Wiffle
+    avatar: media/avatars/wiffle.png
     bio: Silly guy i suppose
     links:
       - ["Fediverse", "https://go.rocha.social/@bruno"]
       - ["Github", "https://github.com/rochacbruno"]
       - ["Linkedin", "https://www.linkedin.com/in/rochacbruno/"]
-      - ["Links", "https://bruno.rocha.social"]
-  karlamagueta:
-    name: Karla Magueta
-    avatar: https://github.com/karlamagueta.png
-    links:
-      - ["Github", "https://github.com/karlamagueta"]
+  marmite:
+    name: Marmite
+    avatar: media/avatars/marmite.gif
+    bio: A mysterious figure who loves to share knowledge and insights on various topics.
 authors_title: Authors
 enable_search: false
 enable_related_content: false
@@ -50,7 +48,10 @@ menu:
   - archive.html
 - - Authors
   - authors.html
-extra: null
+extra:
+  footer_github: https://github.com/rochacbruno
+  footer_website: https://foxyiscoding.github.io/_blog/
+  footer_discord: https://discord.gg/
 series: {}
 toc: false
 json_feed: false

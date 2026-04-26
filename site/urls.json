@@ -1,66 +1,90 @@
 {
   "posts": [
-    "/installation.html"
+    "https://foxyiscoding.github.io/_blog/hello-hackclub.html",
+    "https://foxyiscoding.github.io/_blog/installation.html",
+    "https://foxyiscoding.github.io/_blog/why-to-use-marmite.html",
+    "https://foxyiscoding.github.io/_blog/markdown-format.html"
   ],
   "pages": [
-    "/._announce.html",
-    "/about.html",
-    "/pages.html"
+    "https://foxyiscoding.github.io/_blog/._announce.html",
+    "https://foxyiscoding.github.io/_blog/about.html",
+    "https://foxyiscoding.github.io/_blog/pages.html"
   ],
   "tags": [
-    "/tag-installation.html",
-    "/tag-guide.html",
-    "/tag-docs.html",
-    "/tags.html"
+    "https://foxyiscoding.github.io/_blog/tag-docs.html",
+    "https://foxyiscoding.github.io/_blog/tag-gfm.html",
+    "https://foxyiscoding.github.io/_blog/tag-hackclub.html",
+    "https://foxyiscoding.github.io/_blog/tag-markdown.html",
+    "https://foxyiscoding.github.io/_blog/tag-common-mark.html",
+    "https://foxyiscoding.github.io/_blog/tag-guide.html",
+    "https://foxyiscoding.github.io/_blog/tag-installation.html",
+    "https://foxyiscoding.github.io/_blog/tags.html"
   ],
   "authors": [
-    "/author-wiffle.html",
-    "/authors.html"
+    "https://foxyiscoding.github.io/_blog/author-marmite.html",
+    "https://foxyiscoding.github.io/_blog/author-wiffle.html",
+    "https://foxyiscoding.github.io/_blog/authors.html"
   ],
   "series": [],
   "streams": [
-    "/streams.html"
+    "https://foxyiscoding.github.io/_blog/streams.html"
   ],
   "archives": [
-    "/archive-2025.html",
-    "/archive.html"
+    "https://foxyiscoding.github.io/_blog/archive-2026.html",
+    "https://foxyiscoding.github.io/_blog/archive-2025.html",
+    "https://foxyiscoding.github.io/_blog/archive-2024.html",
+    "https://foxyiscoding.github.io/_blog/archive.html"
   ],
   "feeds": [
-    "/index.rss",
-    "/tag-installation.rss",
-    "/tag-guide.rss",
-    "/tag-docs.rss",
-    "/author-wiffle.rss",
-    "/archive-2025.rss"
+    "https://foxyiscoding.github.io/_blog/index.rss",
+    "https://foxyiscoding.github.io/_blog/tag-docs.rss",
+    "https://foxyiscoding.github.io/_blog/tag-gfm.rss",
+    "https://foxyiscoding.github.io/_blog/tag-hackclub.rss",
+    "https://foxyiscoding.github.io/_blog/tag-markdown.rss",
+    "https://foxyiscoding.github.io/_blog/tag-common-mark.rss",
+    "https://foxyiscoding.github.io/_blog/tag-guide.rss",
+    "https://foxyiscoding.github.io/_blog/tag-installation.rss",
+    "https://foxyiscoding.github.io/_blog/author-marmite.rss",
+    "https://foxyiscoding.github.io/_blog/author-wiffle.rss",
+    "https://foxyiscoding.github.io/_blog/archive-2026.rss",
+    "https://foxyiscoding.github.io/_blog/archive-2025.rss",
+    "https://foxyiscoding.github.io/_blog/archive-2024.rss"
   ],
   "pagination": [
-    "/pages-1.html",
-    "/tag-installation-1.html",
-    "/tag-guide-1.html",
-    "/tag-docs-1.html",
-    "/author-wiffle-1.html",
-    "/archive-2025-1.html"
+    "https://foxyiscoding.github.io/_blog/pages-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-docs-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-gfm-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-hackclub-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-markdown-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-common-mark-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-guide-1.html",
+    "https://foxyiscoding.github.io/_blog/tag-installation-1.html",
+    "https://foxyiscoding.github.io/_blog/author-marmite-1.html",
+    "https://foxyiscoding.github.io/_blog/author-wiffle-1.html",
+    "https://foxyiscoding.github.io/_blog/archive-2026-1.html",
+    "https://foxyiscoding.github.io/_blog/archive-2025-1.html",
+    "https://foxyiscoding.github.io/_blog/archive-2024-1.html"
   ],
   "file_mappings": [],
   "misc": [
-    "/index.html"
+    "https://foxyiscoding.github.io/_blog/index.html"
   ],
   "summary": {
-    "posts": 1,
+    "posts": 4,
     "pages": 3,
-    "tags": 4,
-    "authors": 2,
+    "tags": 8,
+    "authors": 3,
     "series": 0,
     "streams": 1,
-    "archives": 2,
-    "feeds": 6,
-    "pagination": 6,
+    "archives": 4,
+    "feeds": 13,
+    "pagination": 13,
     "file_mappings": 0,
     "misc": 1,
-    "total": 26,
+    "total": 50,
     "meta": {
-      "url": "",
-      "absolute_urls": false
+      "url": "https://foxyiscoding.github.io/_blog",
+      "absolute_urls": true
     }
   }
 }

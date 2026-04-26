@@ -14,41 +14,82 @@
 
 {% block main %}
 
+{% set is_tag_page = current_page and (current_page is starting_with("tag-")) %}
+{% set is_archive_page = current_page and (current_page is starting_with("archive-")) %}
+{% set is_author_page = author is defined %}
+{% set tag_label = title | replace(from="Posts tagged with '", to="") | replace(from="'", to="") %}
+{% set archive_label = title | replace(from="Posts from '", to="") | replace(from="'", to="") %}
+
 {# Page Title (shown for non-index pages) #}
 {% if title and current_page != "index.html" %}
+{% if is_tag_page %}
+<header class="tag-hero-card">
+    <div class="tag-hero-badge" aria-hidden="true">
+        <span class="material-icons">sell</span>
+    </div>
+    <div class="tag-hero-copy">
+        <h1 class="tag-hero-title">{{ tag_label | title }}</h1>
+        <p class="tag-hero-subtitle">Everything filed under this topic.</p>
+    </div>
+</header>
+<div class="tag-hero-divider" aria-hidden="true"></div>
+{% elif is_archive_page %}
+<header class="tag-hero-card">
+    <div class="tag-hero-badge" aria-hidden="true">
+        <span class="material-icons">archive</span>
+    </div>
+    <div class="tag-hero-copy">
+        <h1 class="tag-hero-title">{{ archive_label | title }}</h1>
+        <p class="tag-hero-subtitle">Everything published in this archive.</p>
+    </div>
+</header>
+<div class="tag-hero-divider" aria-hidden="true"></div>
+{% elif is_author_page %}
+<header class="tag-hero-card author-hero-card h-card">
+    <div class="tag-hero-badge author-hero-badge" aria-hidden="true">
+        {% if author.avatar %}
+        <img src="{{url_for(path=author.avatar)}}" alt="{{ author.name }}" class="author-avatar u-photo">
+        {% else %}
+        <span class="material-icons">person</span>
+        {% endif %}
+    </div>
+    <div class="tag-hero-copy author-hero-copy">
+        <h1 class="tag-hero-title author-hero-title p-name">{{ author.name }}</h1>
+        <p class="tag-hero-subtitle author-hero-subtitle">Author of {{ total_content }} post{% if total_content > 1 %}s{% endif %}</p>
+        {% if author.bio %}
+        <p class="author-hero-bio p-note">{{ author.bio }}</p>
+        {% endif %}
+        {% if author.links %}
+        <div class="author-links author-hero-links">
+            {% for link in author.links %}
+            {% set link_name = link.0 | lower %}
+            {% set link_url = link.1 | lower %}
+            {% set author_icon = "link" %}
+            {% if "github" in link_name or "github" in link_url %}{% set author_icon = "code" %}{% endif %}
+            {% if "linkedin" in link_name or "linkedin" in link_url %}{% set author_icon = "business_center" %}{% endif %}
+            {% if "fediverse" in link_name or "mastodon" in link_url %}{% set author_icon = "public" %}{% endif %}
+            {% if "twitter" in link_name or "x.com" in link_url %}{% set author_icon = "alternate_email" %}{% endif %}
+            <a href="{{ url_for(path=link.1) }}" {% if link.1 is starting_with("http") %}target="_blank"{% endif %} class="author-link u-url" aria-label="{{ link.0 }}">
+                <span class="material-icons" aria-hidden="true">{{ author_icon }}</span>
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</header>
+<div class="tag-hero-divider author-hero-divider" aria-hidden="true"></div>
+{% else %}
+{% if not is_author_page %}
 <header class="list-header">
     <h1 class="list-title">{{ title }}</h1>
 </header>
 {% endif %}
-
-{# Author Profile with IndieWeb h-card (for author pages) #}
-{% if author is defined %}
-<section class="author-profile h-card">
-    <div class="author-info">
-        {% if author.avatar %}
-        <img src="{{url_for(path=author.avatar)}}" alt="{{ author.name }}" class="author-avatar u-photo">
-        {% endif %}
-        <div class="author-details">
-            <h1 class="author-name p-name">{{ author.name }}</h1>
-            <p class="author-content-count">Author of {{ total_content }} post{% if total_content > 1 %}s{% endif %}</p>
-            {% if author.bio %}
-            <p class="author-bio p-note">{{ author.bio }}</p>
-            {% endif %}
-            {% if author.links %}
-            <div class="author-links">
-                {% for link in author.links %}
-                <a href="{{ url_for(path=link.1) }}" {% if link.1 is starting_with("http") %}target="_blank"{% endif %} class="author-link u-url">{{ link.0 }}</a>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </div>
-    </div>
-</section>
+{% endif %}
 {% endif %}
 
 {# Content List with IndieWeb h-feed #}
 {% if content_list %}
-<section class="content-list h-feed">
+<section class="content-list content-list--three-up h-feed{% if current_page == 'index.html' %} content-list--index-grid{% endif %}{% if is_tag_page or is_archive_page or is_author_page %} content-list--tag-grid{% endif %}">
     {% if title %}<h1 class="p-name" style="display: none;">{{ title }}</h1>{% endif %}
     {% for item in content_list %}
     <article class="content-item h-entry">

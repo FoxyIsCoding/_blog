@@ -69,24 +69,49 @@
         <h1 class="content-title">{{ content.title }}</h1>
 
         {# Content Metadata (for posts with dates) #}
-        {% if content.date %}
+        {% if content.date or content.description or content.authors %}
         {# Calculate reading time #}
         {% set words = content.html | striptags | split(pat=' ') | length %}
         {% set reading_time = (words / 200) | round(method='ceil') %}
 
         <div class="content-meta">
-            <time class="content-date" datetime="{{ content.date | date(format='%+') }}">
-                {{ content.date | default_date_format }} - &#10710; {{ reading_time }} min
-            </time>
+            <div class="content-meta-top">
+                {% if content.date %}
+                <time class="content-date" datetime="{{ content.date | date(format='%+') }}">
+                    {{ content.date | date(format='%b %e, %Y') | upper }}
+                </time>
+                {% endif %}
+
+                {% if content.description %}
+                {% if content.date %}<span class="content-meta-divider" aria-hidden="true"></span>{% endif %}
+                <p class="content-description p-summary">{{ content.description }}</p>
+                {% elif content.date %}
+                <span class="content-reading-time">{{ reading_time }} min read</span>
+                {% endif %}
+            </div>
 
             {# Authors with IndieWeb h-card #}
             {% if content.authors %}
-            <div class="content-authors">
-                by
+            <div class="content-authors-row">
                 {% for author in content.authors %}
+                {% set has_author_profile = site.authors and (author in site.authors) %}
+                {% set author_name = author %}
+                {% if has_author_profile and site.authors[author].name %}
+                {% set author_name = site.authors[author].name %}
+                {% endif %}
                 {% set slug = "author-" ~ author | trim | slugify %}
                 {% set link = slug ~ ".html"%}
-                <span class="h-card p-author"><a href="{{url_for(path=link)}}" class="item-author p-name u-url">{{ author }}</a></span>{% if not loop.last %}, {% endif %}
+                <span class="h-card p-author">
+                    <a href="{{url_for(path=link)}}" class="item-author p-name u-url">
+                        {% if has_author_profile and site.authors[author].avatar %}<img src="{{url_for(path=site.authors[author].avatar)}}" alt="{{ author_name }}" class="content-author-avatar u-photo">{% endif %}
+                        <span class="content-author-text">
+                            <span class="content-author-name">{{ author_name }}</span>
+                            {% if has_author_profile and site.authors[author].bio %}
+                            <span class="content-author-bio p-note">{{ site.authors[author].bio }}</span>
+                            {% endif %}
+                        </span>
+                    </a>
+                </span>
                 {% endfor %}
             </div>
             {% endif %}

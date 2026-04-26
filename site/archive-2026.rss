@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog</title><link>http://</link><description>a silly blog page where i might post some stuff.. sometime...</description><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><lastBuildDate>Wed, 01 Apr 2026 15:00:51 GMT</lastBuildDate><generator>marmite</generator><item><title>Welcome to Marmite</title><link>http:///welcome.html</link><author>wiffle</author><guid>http:///welcome.html</guid><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><source url="http://">archive-2026</source><content:encoded><![CDATA[<!-- Content Injected to every content markdown header -->
-<p>This is your first post!</p>
-<h2><a href="#edit-this-content" aria-hidden="true" class="anchor" id="edit-this-content"></a>Edit this content</h2>
-<p>edit on <code>content/{date}-welcome.md</code></p>
-<h2><a href="#add-more-content" aria-hidden="true" class="anchor" id="add-more-content"></a>Add more content</h2>
-<p>create new markdown files in the <code>content</code> folder</p>
-<p>use <code>marmite --new</code> to create new content</p>
-<h2><a href="#customize-your-site" aria-hidden="true" class="anchor" id="customize-your-site"></a>Customize your site</h2>
-<p>edit <code>marmite.yaml</code> to change site settings</p>
-<p>edit the files starting with <code>_</code> in the <code>content</code> folder to change the layout</p>
-<p>or edit the templates to create a custom layout</p>
-<h2><a href="#deploy-your-site" aria-hidden="true" class="anchor" id="deploy-your-site"></a>Deploy your site</h2>
-<p>read more on <a href="https://marmite.blog">marmite documentation</a></p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog</title><link>https://foxyiscoding.github.io/_blog</link><description>a silly blog page where i might post some stuff.. sometime...</description><pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate><lastBuildDate>Tue, 21 Apr 2026 15:13:38 GMT</lastBuildDate><generator>marmite</generator><item><title>Hello hackclub :3</title><link>https://foxyiscoding.github.io/_blog/hello-hackclub.html</link><description><![CDATA["A showcase message for yall :3"]]></description><author>wiffle</author><category>hackclub</category><guid>https://foxyiscoding.github.io/_blog/hello-hackclub.html</guid><pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate><source url="https://foxyiscoding.github.io/_blog">archive-2026</source><content:encoded><![CDATA[<!-- Content Injected to every content markdown header -->
+<p>if you are reading this, then you are probably here cuz of the flavortown project review.. Well let me show you around here :P</p>
+<h2><a href="#what-to-reviewlook-at" aria-hidden="true" class="anchor" id="what-to-reviewlook-at"></a>what to review/look at</h2>
+<h3><a href="#the-creation-of-the-blog" aria-hidden="true" class="anchor" id="the-creation-of-the-blog"></a>The creation of the blog</h3>
+<p>Soo before i get into any of the feautures of this blog i want to talk about how i made it :P
+The blog uses a static site generator called marmite which is a rust based static site generator. I chose this because acording to people it highly customizable and is very fast. I also wanted to learn rust so this was a good opportunity to do so</p>
+<p>It was not as cuztomizable as i thought it would be but it was still pretty good. I had to make a lot of changes to the codebase to get it to work the way i wanted it to but in the end it was worth it.. This project is now the most complex and nicest looking theme of marmite ever made 😭</p>
+<h3><a href="#what-can-you-do-here" aria-hidden="true" class="anchor" id="what-can-you-do-here"></a>What can you do here?</h3>
+<p>Well you can read the blog posts of course lol but you can also experiment with the theme.. Bcuz this project isnt about the blog posts, isnt about rust static site generators, its about the theme..</p>
+<p>Thats also why i would like you to not downvote this project if you dont like the blog posts, i want you to downvote it if you dont like the theme.. As the theme is the main focus of this project and the blog posts are just there to show off the theme..</p>
+<p>I always wanted to make a blog but i never had the motivation to do so, but this project gave me the motivation to actually make one.. I always see all of those cool asf blogs and i wonder how they are made and how they look so good, and now i know (except that like noone uses marmite so ye 😭)</p>
+<p>The theme has a material 3 design inspired looks. The author section and tags section uses nice smooth animations and the blog posts are displayed in a nice grid layout. The theme also has a dark mode which is pretty cool :P ( fun fact: it has white mode apparently in the css but i was lazy to try how it looks 😭 )</p>
+<h3><a href="#alsoo-a-cool-asf-feature" aria-hidden="true" class="anchor" id="alsoo-a-cool-asf-feature"></a>alsoo a cool asf feature..</h3>
+<p>yk what google has.. Any android 12+ (or 13+ i dont remember) phone adapts the color scheme of the phone to the apps.. well this blog does that too :P it adapts the color scheme of the blog to the banner image.. This is done by extracting the dominant color from the banner image and using it as the primary color of the theme.. This is a pretty cool feature and it makes the blog look really nice :3</p>
+<h3><a href="#conclusion" aria-hidden="true" class="anchor" id="conclusion"></a>Conclusion</h3>
+<p>Overall i am pretty happy with how the blog turned out.. It was a lot of work to get it to look the way i wanted it to but in the end it was worth it.. I hope you like it too :3</p>
 <!-- Content Injected to every content markdown footer -->
 ]]></content:encoded></item></channel></rss>

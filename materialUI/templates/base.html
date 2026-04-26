@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Colorscheme - Configure in marmite.yaml with extra: colorscheme: nord -->
     {% if site.extra.colorscheme %}
     <link rel="stylesheet" type="text/css" href="{{url_for(path='static/colorschemes/' ~ site.extra.colorscheme ~ '.css')}}">
@@ -51,7 +53,7 @@
     {{ htmlhead }}
     {% endif %}
 </head>
-<body>
+<body{% if current_page %} class="page-{{ current_page | replace(from='.html', to='') | slugify }}"{% endif %}>
     <!-- Announcement Bar -->
     <!-- Create content/_announce.md to display site announcements -->
     {% if announce is defined %}
@@ -161,7 +163,18 @@
            {{ footer}}
         {% else %}
         <footer class="site-footer">
-            {{ site.footer | safe }}
+            
+            <div class="author-links site-footer-links" aria-label="Footer links">
+                <a href="https://github.com/foxyiscoding" target="_blank" rel="noopener noreferrer" class="author-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="{% if site.extra and site.extra.footer_website %}{{url_for(path=site.extra.footer_website)}}{% else %}{{url_for(path='')}}{% endif %}" {% if site.extra and site.extra.footer_website and (site.extra.footer_website is starting_with("http")) %}target="_blank" rel="noopener noreferrer"{% endif %} class="author-link" aria-label="Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://discord.com/users/830732127984549929" target="_blank" rel="noopener noreferrer" class="author-link" aria-label="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
             <!-- Colorscheme Toggle -->
             <!-- Enable in marmite.yaml with extra: colorscheme_toggle: true -->
             {% if site.extra.colorscheme_toggle %}
@@ -169,7 +182,6 @@
                 colorscheme: <select name="colorscheme" class="colorscheme-toggle"><option value="default">default</option></select>
                 <span class="theme-toggle" title="dark mode">&#9789;</span>
             </div>
-            
             {% endif %}
         </footer>
         
