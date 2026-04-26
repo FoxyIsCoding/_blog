@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog</title><link>https://foxyiscoding.github.io/_blog</link><description>a silly blog page where i might post some stuff.. sometime...</description><pubDate>Thu, 17 Oct 2024 12:00:01 GMT</pubDate><lastBuildDate>Sun, 26 Apr 2026 05:32:42 GMT</lastBuildDate><generator>marmite</generator><item><title>Markdown Formatting Showcase</title><link>https://foxyiscoding.github.io/_blog/markdown-format.html</link><description><![CDATA["The content on Marmite accepts any valid CommonMark or Github Flavoured markdown and some GFM extensions."]]></description><author>wiffle</author><category>docs</category><category>markdown</category><category>Common Mark</category><category>GFM</category><guid>https://foxyiscoding.github.io/_blog/markdown-format.html</guid><pubDate>Thu, 17 Oct 2024 12:00:01 GMT</pubDate><source url="https://foxyiscoding.github.io/_blog">tag-common-mark</source><content:encoded><![CDATA[<!-- Content Injected to every content markdown header -->
+<h2><a href="#common-markdown" aria-hidden="true" class="anchor" id="common-markdown"></a>Common Markdown</h2>
+<p>The content on Marmite accepts any valid <code>CommonMark</code> or <strong>Github</strong> <em>Flavoured</em> markdown
+and some <code>GFM</code> extensions, Marmite also does post processing of HTML to support features such as
+back-links and Obsidian links.</p>
+<h3><a href="#paragraphs-and-formatting" aria-hidden="true" class="anchor" id="paragraphs-and-formatting"></a>Paragraphs and formatting</h3>
+<p>Simple paragraph and usual formatting like <strong>bold</strong>, <u>underline</u>, <em>italic</em>
+and also all sorts of formatting elements, as follows.</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">**bold**, __underline__, *italic*</code></pre>
+<h3><a href="#strike-through" aria-hidden="true" class="anchor" id="strike-through"></a>Strike-through</h3>
+<p>The following is <del>no more</del>.</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">The following is ~~no more~~.</code></pre>
+<h3><a href="#table" aria-hidden="true" class="anchor" id="table"></a>Table</h3>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>List</td>
+<td>Here's a list! <ul><li>Item one.</li><li>Item two.</li></ul></td>
+</tr>
+</tbody>
+</table>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title |
+| List        | Here&#39;s a list! &lt;ul&gt;&lt;li&gt;Item one.&lt;/li&gt;&lt;li&gt;Item two.&lt;/li&gt;&lt;/ul&gt; |</code></pre>
+<h3><a href="#footnotes" aria-hidden="true" class="anchor" id="footnotes"></a>Footnotes</h3>
+<p>Here is a simple footnote<sup class="footnote-ref"><a href="#fn-1" id="fnref-1" data-footnote-ref>1</a></sup>. With some<sup class="footnote-ref"><a href="#fn-2" id="fnref-2" data-footnote-ref>2</a></sup> additional text after it.</p>
+<p>A reference<a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="Hobbit lifestyles">1</a> can also be used to just create a link hidden from footnotes.</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">Here is a simple footnote[^1]. With some[^2] additional text after it.  
+
+A reference[1] can also be used to just create a link hidden from footnotes.</code></pre>
+<p>And on the end of the file:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">[^1]: My footnote.
+[^2]: Another footnote.
+
+<a-tu>[1]</a-tu>: <a-tu>&lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt;</a-tu> <a-tl>&quot;Hobbit lifestyles&quot;</a-tl></code></pre>
+<div class="markdown-alert markdown-alert-tip">
+<p class="markdown-alert-title">Tip</p>
+<p>Add global references to the <code>_references.md</code> file to reuse on any content.</p>
+</div>
+<div class="markdown-alert markdown-alert-important">
+<p class="markdown-alert-title">Important</p>
+<p>Footnote definitions must be separated from other content (like link references) by a blank line.
+Without a blank line, subsequent content may be parsed as part of the footnote instead of as separate definitions.</p>
+</div>
+<h3><a href="#block-quote" aria-hidden="true" class="anchor" id="block-quote"></a>Block quote</h3>
+<blockquote>
+<p>Not a quote
+quote</p>
+<blockquote>
+<blockquote>
+<p>Nested quote</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>&gt;</a-p>Not a quote
+<a-p>&gt; </a-p>quote
+<a-p>&gt; &gt; &gt; </a-p>Nested quote</code></pre>
+<p>Multiline quote</p>
+<blockquote>
+<p>&quot;Marmite is the easiest SSG&quot; created by
+Bruno Rocha with the contribution of various people.</p>
+</blockquote>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>&gt;&gt;&gt;</a-p>
+&quot;Marmite is the easiest SSG&quot; created by
+Bruno Rocha with the contribution of various people.
+<a-p>&gt;&gt;&gt;</a-p></code></pre>
+<p>Multi paragraph quote</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with</p>
+</blockquote>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>&gt; </a-p>Dorothy followed her through many of the beautiful rooms in her castle.
+<a-p>&gt; </a-p>
+<a-p>&gt; </a-p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with </code></pre>
+<p>Rich quotes</p>
+<blockquote>
+<p><strong>The quarterly results look great!</strong></p>
+<ul>
+<li>Revenue was off the chart.</li>
+<li>Profits were higher than ever.</li>
+</ul>
+<p><em>Everything</em> is going according to <strong>plan</strong>.</p>
+</blockquote>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>&gt; </a-p>**The quarterly results look great!**
+<a-p>&gt; </a-p>
+<a-p>&gt; - </a-p>Revenue was off the chart.
+<a-p>&gt; - </a-p>Profits were higher than ever.
+<a-p>&gt; </a-p>
+<a-p>&gt;  </a-p>*Everything* is going according to **plan**.</code></pre>
+<h3><a href="#underline" aria-hidden="true" class="anchor" id="underline"></a>Underline</h3>
+<p><u>dunder</u></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">__dunder__</code></pre>
+<h3><a href="#code" aria-hidden="true" class="anchor" id="code"></a>Code</h3>
+<pre class="marmite-code"><code class="marmite-code-inner language-python"><a-k>import</a-k> <a-v>antigravity</a-v>
+
+<a-k>def</a-k> <a-f>main</a-f>():
+    <a-f>print</a-f>(<a-s>&quot;Python is a great language&quot;</a-s>)</code></pre>
+<pre class="marmite-code"><code class="marmite-code-inner language-rust"><a-k>fn</a-k> <a-f>main</a-f><a-p>()</a-p> <a-p>{</a-p>
+    <a-m>println!</a-m><a-p>(</a-p><a-s>&quot;Marmite is made with Rust!&quot;</a-s><a-p>);</a-p>
+<a-p>}</a-p></code></pre>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>```</a-p><a-tl>python
+</a-tl><a-p>import</a-p><a-p> </a-p><a-v>antigravity</a-v><a-p>
+</a-p><a-p>
+</a-p><a-p>def</a-p><a-p> </a-p><a-f>main</a-f><a-p>():
+</a-p><a-p>    </a-p><a-f>print</a-f><a-p>(</a-p><a-s>&quot;Python is a great language&quot;</a-s><a-p>)
+</a-p><a-p>```</a-p><a-p>
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-tl>rust
+</a-tl><a-p>fn</a-p><a-p> </a-p><a-f>main</a-f><a-p>()</a-p><a-p> </a-p><a-p>{</a-p><a-p>
+</a-p><a-p>    </a-p><a-m>println!</a-m><a-p>(</a-p><a-s>&quot;Marmite is made with Rust!&quot;</a-s><a-p>);</a-p><a-p>
+</a-p><a-p>}</a-p><a-p>
+</a-p><a-p>```</a-p></code></pre>
+<h3><a href="#lists" aria-hidden="true" class="anchor" id="lists"></a>lists</h3>
+<ul>
+<li>lists
+<ul>
+<li>sub item</li>
+</ul>
+</li>
+<li>images
+<ul>
+<li>other</li>
+</ul>
+</li>
+<li>tables</li>
+<li>Formatting</li>
+</ul>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>- </a-p>lists
+<a-p>  - </a-p>sub item
+<a-p>- </a-p>images
+<a-p>  * </a-p>other
+<a-p>- </a-p>tables
+<a-p>- </a-p>Formatting</code></pre>
+<p>Numbered</p>
+<ol>
+<li>First item</li>
+<li>Second item
+<ul>
+<li>Indented unordered item</li>
+<li>Indented unordered item</li>
+</ul>
+</li>
+<li>Third item
+<ol>
+<li>Indented ordered item</li>
+<li>Indented ordered item</li>
+</ol>
+</li>
+<li>Fourth item</li>
+</ol>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>1. </a-p>First item
+<a-p>1. </a-p>Second item
+<a-p>    - </a-p>Indented unordered item
+<a-p>    - </a-p>Indented unordered item
+<a-p>1. </a-p>Third item
+<a-p>    1. </a-p>Indented ordered item
+<a-p>    1. </a-p>Indented ordered item
+<a-p>1. </a-p>Fourth item </code></pre>
+<p>Starting lists with numbers requires a <code>number\</code></p>
+<ul>
+<li>1983. A great year!</li>
+<li>I think 1984 was second best.</li>
+</ul>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>- </a-p>1983\. A great year!
+<a-p>- </a-p>I think 1984 was second best. </code></pre>
+<h3><a href="#images" aria-hidden="true" class="anchor" id="images"></a>Images</h3>
+<p>Photo<br />
+<figure><img src="/media/gallery/test20/Konachan.com%20-%20400737%202girls%20animal%20bird%20black_hair%20dress%20hug%20loli%20original%20sky%20tracyton%20white_hair.png" alt="Photo" /></figure></p>
+<p>Same but containing a tooltip if you hover the mouse on<br />
+<figure><img src="/media/gallery/test20/Konachan.com%20-%20400737%202girls%20animal%20bird%20black_hair%20dress%20hug%20loli%20original%20sky%20tracyton%20white_hair.png" alt="Photo" title="A photo" /><figcaption>A photo</figcaption></figure></p>
+<hr />
+<h2><a href="#creating-links" aria-hidden="true" class="anchor" id="creating-links"></a>Creating Links</h2>
+<h3><a href="#regular-link" aria-hidden="true" class="anchor" id="regular-link"></a>Regular link</h3>
+<p><a href="https://github.com/rochacbruno/marmite">Marmite</a></p>
+<p><a href="https://pudim.com.br" title="A picture of a pudim">A link with a tooltip</a></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">[Marmite](https://github.com/rochacbruno/marmite)
+
+[A link with a tooltip](https://pudim.com.br &quot;A picture of a pudim&quot;)  </code></pre>
+<h3><a href="#auto-link" aria-hidden="true" class="anchor" id="auto-link"></a>Auto-link</h3>
+<p><a href="https://github.com/rochacbruno/marmite">https://github.com/rochacbruno/marmite</a><br />
+<a href="https://www.markdownguide.org">https://www.markdownguide.org</a><br />
+<a href="mailto:fake@example.com">fake@example.com</a></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">https://github.com/rochacbruno/marmite  
+&lt;https://www.markdownguide.org&gt;  
+&lt;fake@example.com&gt;</code></pre>
+<h3><a href="#wikilinks" aria-hidden="true" class="anchor" id="wikilinks"></a>Wikilinks</h3>
+<p>Wikilinks allows to link using <code>[[name|url]]</code> syntax.</p>
+<p><a href="getting-started.html" data-wikilink="true">Read the Tutorial</a> and <a href="getting-started.html" data-wikilink="true">Read the Tutorial</a> and <a href="getting-started.html" data-wikilink="true">Read the Tutorial</a></p>
+<p>Anchors also supported <a href="about.html#faq" data-wikilink="true">FAQ</a></p>
+<p><a href="https://pudim.com.br" data-wikilink="true">Pudim</a></p>
+<p>It also resolve anchors like <a href="#wikilinks" data-wikilink="true">Wikilinks</a><br />
+and internal content by title like
+<a href="markdown-20format.html#wikilinks" data-wikilink="true">MD Wikilinks</a> or <a href="markdown-20format.html" data-wikilink="true">MD Format</a></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">[[Read the Tutorial|getting-started]] and [[Read the Tutorial|getting-started.md]] and [[Read the Tutorial|getting-started.html]]
+
+[[Pudim|https://pudim.com.br]]
+
+It also resolve anchors like [[Wikilinks|#wikilinks]]  
+and internal content by title like 
+[[MD Wikilinks|Markdown Format#Wikilinks]] or [[MD Format|Markdown Format]]</code></pre>
+<h3><a href="#obsidian-links" aria-hidden="true" class="anchor" id="obsidian-links"></a>Obsidian Links</h3>
+<p>Obsidian links are made using <code>[[page-slug]]</code> or <code>[[page-slug.md]]</code></p>
+<p>Example:</p>
+<p><a href="about.html" data-wikilink="true">about</a> and <a href="about.html" data-wikilink="true">about</a> and <a href="about.html" data-wikilink="true">about</a> should point both to the about page.</p>
+<p>Anchors also supported <a href="about.html#faq" data-wikilink="true">about > faq</a></p>
+<p><a href="https://pudim.com.br" data-wikilink="true">https://pudim.com.br</a></p>
+<p>It also resolve anchors like <a href="#obsidian-20links" data-wikilink="true">Obsidian Links</a><br />
+and internal content by title like<br />
+<a href="markdown-20format.html#obsidian-20links" data-wikilink="true">Markdown Format > Obsidian Links</a> or <a href="markdown-20format.html" data-wikilink="true">Markdown Format</a></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">[[about]] and [[about.md]] and [[about.html]] should point both to the about page.
+
+Anchors also supported [[about#faq]]
+
+[[https://pudim.com.br]]
+
+It also resolve anchors like [[#Obsidian Links]]  
+and internal content by title like 
+[[Markdown Format#Obsidian Links]] or [[Markdown Format]]</code></pre>
+<div class="markdown-alert markdown-alert-note">
+<p class="markdown-alert-title">Note</p>
+<p>If you want to use Obsidian links with display text like in <code>[[link|display text]]</code> check
+how the options <code>wikilinks_title_before_pipe</code> and <code>wikilinks_title_after_pipe</code> on <a href="configurable-20markdown-20parser-20options.html" data-wikilink="true">Configurable Markdown Parser Options</a></p>
+</div>
+<h3><a href="#back-links" aria-hidden="true" class="anchor" id="back-links"></a>Back-links</h3>
+<p>Every time you link to another page or post
+using the backreference like <code>{slug}</code>, <code>{slug}.md</code> or <code>{slug}.html</code>
+<strong>marmite</strong> will track the backlinking and show
+a list of pages that links to each other.</p>
+<p>Examples:</p>
+<p><a href="hello.html" data-wikilink="true">hello</a>
+<a href="hello.html">Hello1</a>
+<a href="hello.html">Hello2</a>
+<a href="hello.html" data-wikilink="true">Hello3</a>
+<a href="hello.html" data-wikilink="true">Hello4</a>
+<a href="hello.html">Hello5</a></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">[[hello]]
+[Hello1](hello.html)
+[Hello2](hello.md)
+[[Hello3|hello]]
+[[Hello4|hello.md]]
+&lt;a href=&quot;hello.html&quot;&gt;Hello5&lt;/a&gt;</code></pre>
+<p>In any case the <code>hello.html</code> page will have a this page
+on its list of back-links:</p>
+<figure>
+  <figcaption>Backlinks</figcaption>
+  <img src="media/screenshots/backlink.png" width="500">
+</figure>
+<hr />
+<h2><a href="#extensions" aria-hidden="true" class="anchor" id="extensions"></a>Extensions</h2>
+<h3><a href="#task" aria-hidden="true" class="anchor" id="task"></a>Task</h3>
+<ul>
+<li><input type="checkbox" checked="" disabled="" /> Task 1</li>
+<li><input type="checkbox" disabled="" /> Task 2</li>
+</ul>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>- </a-p>[x] Task 1
+<a-p>- </a-p>[ ] Task 2</code></pre>
+<h3><a href="#emoji" aria-hidden="true" class="anchor" id="emoji"></a>Emoji</h3>
+<p>😄 - 🦀 - 🐍</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">:smile: - :crab: - :snake:</code></pre>
+<h3><a href="#description-lists" aria-hidden="true" class="anchor" id="description-lists"></a>Description lists</h3>
+<dl>
+<dt>First term</dt>
+<dd>Details for the <strong>first term</strong></dd>
+<dt>Second term</dt>
+<dd>Details for the <strong>second term</strong></dd>
+<dd>More details in second paragraph.</dd>
+</dl>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">First term
+: Details for the **first term**
+
+Second term
+: Details for the **second term**
+: More details in second paragraph.</code></pre>
+<h3><a href="#spoiler" aria-hidden="true" class="anchor" id="spoiler"></a>Spoiler</h3>
+<p>This is <span class="spoiler">secret</span></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">This is ||secret||</code></pre>
+<h3><a href="#math" aria-hidden="true" class="anchor" id="math"></a>Math</h3>
+<blockquote>
+<p>Depends on <code>extra: {&quot;math&quot;: true}</code> defined on frontmatter, then <strong>MathJax</strong> is loaded.</p>
+</blockquote>
+<p>When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+<p>Inline math $1 + 2$ and display math $$x + y$$</p>
+<p>$$
+x^2
+$$</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-html">When $a \ne 0$, there are two solutions to \\(ax^2 + bx + c = 0\\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+Inline math $1 + 2$ and display math $$x + y$$
+
+$$
+x^2
+$$</code></pre>
+<h3><a href="#alerts" aria-hidden="true" class="anchor" id="alerts"></a>Alerts</h3>
+<p>Github Flavored Markdown (GFM) supports alerts, also called callouts or admonitions.</p>
+<div class="markdown-alert markdown-alert-note">
+<p class="markdown-alert-title">Note</p>
+<p>Highlights information that users should take into account, even when skimming.</p>
+</div>
+<div class="markdown-alert markdown-alert-tip">
+<p class="markdown-alert-title">Tip</p>
+<p>Optional information to help a user be more successful.</p>
+</div>
+<div class="markdown-alert markdown-alert-important">
+<p class="markdown-alert-title">Important</p>
+<p>Crucial information necessary for users to succeed.</p>
+</div>
+<div class="markdown-alert markdown-alert-warning">
+<p class="markdown-alert-title">Warning</p>
+<p>Critical content demanding immediate user attention due to potential risks.</p>
+</div>
+<div class="markdown-alert markdown-alert-caution">
+<p class="markdown-alert-title">Caution</p>
+<p>Negative potential consequences of an action.</p>
+</div>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>&gt; </a-p>[!NOTE]  
+<a-p>&gt; </a-p>Highlights information that users should take into account, even when skimming.
+
+<a-p>&gt; </a-p>[!TIP]
+<a-p>&gt; </a-p>Optional information to help a user be more successful.
+
+<a-p>&gt; </a-p>[!IMPORTANT]  
+<a-p>&gt; </a-p>Crucial information necessary for users to succeed.
+
+<a-p>&gt; </a-p>[!WARNING]  
+<a-p>&gt; </a-p>Critical content demanding immediate user attention due to potential risks.
+
+<a-p>&gt; </a-p>[!CAUTION]
+<a-p>&gt; </a-p>Negative potential consequences of an action.</code></pre>
+<p>Optionally a title can be added to the alert:</p>
+<div class="markdown-alert markdown-alert-note">
+<p class="markdown-alert-title">For your attention</p>
+<p>Highlights information that users should take into account, even when skimming.</p>
+</div>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>&gt; </a-p>[!NOTE] For your attention
+<a-p>&gt; </a-p>Highlights information that users should take into account, even when skimming.</code></pre>
+<h3><a href="#diagrams" aria-hidden="true" class="anchor" id="diagrams"></a>Diagrams</h3>
+<blockquote>
+<p>Depends on <code>extra: {&quot;mermaid&quot;: true}</code> defined on frontmatter, then <strong>MermaidJS</strong> is loaded.</p>
+<p><code>mermaid_theme</code> is also configurable with values <code>forest</code>,<code>neutral</code>,<code>dark</code>,<code>forest</code>,<code>base</code>,<code>default</code></p>
+</blockquote>
+<pre class="marmite-code"><code class="marmite-code-inner language-mermaid">sequenceDiagram
+    Alice -&gt;&gt; Bob: Hello Bob, how are you?
+    Bob--&gt;&gt;John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
+
+    Bob--&gt;Alice: Checking with John...
+    Alice-&gt;John: Yes... John, how are you?
+
+</code></pre>
+<pre class="marmite-code"><code class="marmite-code-inner language-mermaid">graph LR
+    A[Square Rect] -- Link text --&gt; B((Circle))
+    A --&gt; C(Round Rect)
+    B --&gt; D{Rhombus}
+    C --&gt; D
+
+</code></pre>
+<pre class="marmite-code"><code class="marmite-code-inner language-mermaid">xychart-beta
+    title &quot;Sales Revenue&quot;
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis &quot;Revenue (in $)&quot; 4000 --&gt; 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+
+</code></pre>
+<pre class="marmite-code"><code class="marmite-code-inner language-mermaid">pie title Pets adopted by volunteers
+    &quot;Dogs&quot; : 386
+    &quot;Cats&quot; : 85
+    &quot;Rats&quot; : 15
+
+</code></pre>
+<pre class="marmite-code"><code class="marmite-code-inner language-mermaid">timeline
+    title History of marmite
+    2024-10-13 : Created
+    2024-10-14 : First Release
+               : First Contribution
+    2024-10-20 : Big refactor
+    2024-10-22 : Diagram support
+</code></pre>
+<details>
+<summary> Click to see the raw mermaid </summary>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown"><a-p>```</a-p><a-tl>mermaid
+</a-tl><a-p>sequenceDiagram
+</a-p><a-p>    Alice -&gt;&gt; Bob: Hello Bob, how are you?
+</a-p><a-p>    Bob--&gt;&gt;John: How about you John?
+</a-p><a-p>    Bob--x Alice: I am good thanks!
+</a-p><a-p>    Bob-x John: I am good thanks!
+</a-p><a-p>    Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
+</a-p><a-p>
+</a-p><a-p>    Bob--&gt;Alice: Checking with John...
+</a-p><a-p>    Alice-&gt;John: Yes... John, how are you?
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-p>
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-tl>mermaid
+</a-tl><a-p>graph LR
+</a-p><a-p>    A[Square Rect] -- Link text --&gt; B((Circle))
+</a-p><a-p>    A --&gt; C(Round Rect)
+</a-p><a-p>    B --&gt; D{Rhombus}
+</a-p><a-p>    C --&gt; D
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-p>
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-tl>mermaid
+</a-tl><a-p>xychart-beta
+</a-p><a-p>    title &quot;Sales Revenue&quot;
+</a-p><a-p>    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+</a-p><a-p>    y-axis &quot;Revenue (in $)&quot; 4000 --&gt; 11000
+</a-p><a-p>    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+</a-p><a-p>    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-p>
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-tl>mermaid
+</a-tl><a-p>pie title Pets adopted by volunteers
+</a-p><a-p>    &quot;Dogs&quot; : 386
+</a-p><a-p>    &quot;Cats&quot; : 85
+</a-p><a-p>    &quot;Rats&quot; : 15
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-p>
+</a-p><a-p>
+</a-p><a-p>```</a-p><a-tl>mermaid
+</a-tl><a-p>timeline
+</a-p><a-p>    title History of marmite
+</a-p><a-p>    2024-10-13 : Created
+</a-p><a-p>    2024-10-14 : First Release
+</a-p><a-p>               : First Contribution
+</a-p><a-p>    2024-10-20 : Big refactor
+</a-p><a-p>    2024-10-22 : Diagram support
+</a-p><a-p>```</a-p></code></pre>
+</details>
+<hr />
+<h2><a href="#html" aria-hidden="true" class="anchor" id="html"></a>HTML</h2>
+<blockquote>
+<p>All <strong>raw</strong> html is allowed</p>
+</blockquote>
+<h3><a href="#superscript" aria-hidden="true" class="anchor" id="superscript"></a>Superscript</h3>
+<p>80<sup>2</sup></p>
+<pre class="marmite-code"><code class="marmite-code-inner language-html">80<a-p>&lt;</a-p><a-tg>sup</a-tg><a-p>&gt;</a-p>2<a-p>&lt;/</a-p><a-tg>sup</a-tg><a-p>&gt;</a-p></code></pre>
+<h3><a href="#embed" aria-hidden="true" class="anchor" id="embed"></a>Embed</h3>
+<p>Just use raw HTML for now, in future we may have a shorcode.</p>
+<iframe width="260" height="160" src="https://www.youtube.com/embed/MjrBTcnnK6c?si=PmQWsGiTh5XguSpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<pre class="marmite-code"><code class="marmite-code-inner language-html"><a-p>&lt;</a-p><a-tg>iframe</a-tg> <a-at>width</a-at>=&quot;<a-s>260</a-s>&quot; <a-at>height</a-at>=&quot;<a-s>160</a-s>&quot; <a-at>src</a-at>=&quot;<a-s>https://www.youtube.com/embed/MjrBTcnnK6c?si=PmQWsGiTh5XguSpb</a-s>&quot; <a-at>title</a-at>=&quot;<a-s>YouTube video player</a-s>&quot;<a-p>&gt;&lt;/</a-p><a-tg>iframe</a-tg><a-p>&gt;</a-p></code></pre>
+<h3><a href="#pico-css-components" aria-hidden="true" class="anchor" id="pico-css-components"></a>Pico CSS components</h3>
+<p><small>The default embedded template uses <a href="https://picocss.com">picocss</a> so it is possible to write raw HTML like this:</small></p>
+<h4><a href="#faq" aria-hidden="true" class="anchor" id="faq"></a>FAQ</h4>
+<details>
+<summary>Why is it named Marmite?</summary>
+<p>The creator of this project was looking for some cool name
+to use for a <strong>mark</strong>down related project.
+Then while having bread with Marmite spread for breakfast
+it looked like a good idea!</p>
+</details>
+<hr />
+<details>
+<summary>Why Rust?</summary>
+<p><strong>Why not?</strong></p>
+</details>
+<hr />
+<pre class="marmite-code"><code class="marmite-code-inner language-html"><a-p>&lt;</a-p><a-tg>details</a-tg><a-p>&gt;</a-p>
+<a-p>&lt;</a-p><a-tg>summary</a-tg><a-p>&gt;</a-p>Why is it named Marmite?<a-p>&lt;/</a-p><a-tg>summary</a-tg><a-p>&gt;</a-p>
+
+The ...
+
+<a-p>&lt;/</a-p><a-tg>details</a-tg><a-p>&gt;</a-p>
+
+<a-p>&lt;</a-p><a-tg>hr</a-tg> <a-p>/&gt;</a-p>
+
+<a-p>&lt;</a-p><a-tg>details</a-tg><a-p>&gt;</a-p>
+<a-p>&lt;</a-p><a-tg>summary</a-tg><a-p>&gt;</a-p>Why Rust?<a-p>&lt;/</a-p><a-tg>summary</a-tg><a-p>&gt;</a-p>
+
+**Why not?**
+
+<a-p>&lt;/</a-p><a-tg>details</a-tg><a-p>&gt;</a-p>
+
+<a-p>&lt;</a-p><a-tg>hr</a-tg> <a-p>/&gt;</a-p></code></pre>
+<h3><a href="#symbols" aria-hidden="true" class="anchor" id="symbols"></a>Symbols</h3>
+<pre class="marmite-code"><code class="marmite-code-inner">Copyright (©) — &amp;copy;
+Registered trademark (®) — &amp;reg;
+Trademark (™) — &amp;trade;
+Euro (€) — &amp;euro;
+Left arrow (←) — &amp;larr;
+Up arrow (↑) — &amp;uarr;
+Right arrow (→) — &amp;rarr;
+Down arrow (↓) — &amp;darr;
+Degree (°) — &amp;#176;
+Pi (π) — &amp;#960;
+</code></pre>
+<p>This is a ©left material.</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-markdown">This is a &amp;copy;left material.</code></pre>
+<p>Bye!</p>
+<!-- Content Injected to every content markdown footer -->
+<section class="footnotes" data-footnotes>
+<ol>
+<li id="fn-1">
+<p>My footnote. <a href="#fnref-1" class="footnote-backref" data-footnote-backref data-footnote-backref-idx="1" aria-label="Back to reference 1">↩</a></p>
+</li>
+<li id="fn-2">
+<p>Another footnote. <a href="#fnref-2" class="footnote-backref" data-footnote-backref data-footnote-backref-idx="2" aria-label="Back to reference 2">↩</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded></item></channel></rss>

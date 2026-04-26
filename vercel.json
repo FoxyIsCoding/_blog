@@ -1,4 +1,4 @@
 {
-  "buildCommand": "uv pip install --system marmite && marmite . site && cp -r materialUI/static/. site/ && cp -r content/media site/",
-  "outputDirectory": "site"
+  "buildCommand": "bash build.sh",
+  "outputDirectory": "_blog"
 }

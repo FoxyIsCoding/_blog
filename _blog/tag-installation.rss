@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog</title><link>https://foxyiscoding.github.io/_blog</link><description>a silly blog page where i might post some stuff.. sometime...</description><pubDate>Sat, 02 Aug 2025 18:02:50 GMT</pubDate><lastBuildDate>Sun, 26 Apr 2026 05:32:42 GMT</lastBuildDate><generator>marmite</generator><item><title>Installation</title><link>https://foxyiscoding.github.io/_blog/installation.html</link><description><![CDATA["How to install Marmite - a fast, minimal static site generator"]]></description><author>wiffle</author><category>installation</category><category>docs</category><category>guide</category><guid>https://foxyiscoding.github.io/_blog/installation.html</guid><pubDate>Sat, 02 Aug 2025 18:02:50 GMT</pubDate><source url="https://foxyiscoding.github.io/_blog">tag-installation</source><content:encoded><![CDATA[<!-- Content Injected to every content markdown header -->
+<p>Marmite can be installed using various methods depending on your platform and preferences. Choose the method that works best for you.</p>
+<h2><a href="#quick-install-recommended" aria-hidden="true" class="anchor" id="quick-install-recommended"></a>Quick Install (Recommended)</h2>
+<p>The easiest way to install Marmite is using our automated install script:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>curl</a-f> <a-co>-sS</a-co> https://marmite.blog/install.sh <a-o>|</a-o> <a-f>sh</a-f></code></pre>
+<p>This script will:</p>
+<ul>
+<li>Detect your operating system and architecture</li>
+<li>Download the appropriate binary for your system</li>
+<li>Install it to <code>~/.local/bin</code> (or a custom directory)</li>
+<li>Verify the installation</li>
+</ul>
+<h3><a href="#custom-installation-directory" aria-hidden="true" class="anchor" id="custom-installation-directory"></a>Custom Installation Directory</h3>
+<p>To install to a custom directory:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>curl</a-f> <a-co>-sS</a-co> https://marmite.blog/install.sh <a-o>|</a-o> <a-f>sh</a-f> <a-co>-s</a-co> <a-co>--</a-co> <a-co>--bin-dir</a-co> /usr/local/bin</code></pre>
+<h3><a href="#environment-variables" aria-hidden="true" class="anchor" id="environment-variables"></a>Environment Variables</h3>
+<p>You can also use environment variables:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-k>export</a-k> <a-pr>MARMITE_BIN_DIR</a-pr>=/custom/path
+<a-f>curl</a-f> <a-co>-sS</a-co> https://marmite.blog/install.sh <a-o>|</a-o> <a-f>sh</a-f></code></pre>
+<h2><a href="#install-from-pypi" aria-hidden="true" class="anchor" id="install-from-pypi"></a>Install from PyPI</h2>
+<p>Marmite is also released on Python Package Index</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>pip</a-f> install marmite
+
+<a-c># OR without installation with uv</a-c>
+<a-f>uvx</a-f> marmite</code></pre>
+<p>Check <a href="python-20installation-20with-20pip.html" data-wikilink="true">Python Installation with pip</a></p>
+<h2><a href="#install-from-source" aria-hidden="true" class="anchor" id="install-from-source"></a>Install from Source</h2>
+<p>If you have Rust installed, you can build Marmite from source:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-c># Install from crates.io</a-c>
+<a-f>cargo</a-f> install marmite
+
+<a-c># Or install from GitHub</a-c>
+<a-f>cargo</a-f> install <a-co>--git</a-co> https://github.com/rochacbruno/marmite
+
+<a-c># Or install using cargo-binstall to get the compiled binary via cargo</a-c>
+<a-f>cargo</a-f> binstall marmite</code></pre>
+<h2><a href="#manual-installation" aria-hidden="true" class="anchor" id="manual-installation"></a>Manual Installation</h2>
+<ol>
+<li>
+<p>Download the appropriate binary for your platform from the <a href="https://github.com/rochacbruno/marmite/releases/latest">releases page</a></p>
+</li>
+<li>
+<p>Extract the archive:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-c># For Linux/macOS</a-c>
+<a-f>tar</a-f> <a-co>-xzf</a-co> marmite-*.tar.gz
+
+<a-c># For Windows</a-c>
+<a-f>unzip</a-f> marmite-*.zip</code></pre>
+</li>
+<li>
+<p>Move the binary to a directory in your PATH:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-c># Linux/macOS</a-c>
+<a-f>sudo</a-f> mv marmite /usr/local/bin/
+
+<a-c># Or to user directory (no sudo required)</a-c>
+<a-f>mkdir</a-f> <a-co>-p</a-co> ~/.local/bin
+<a-f>mv</a-f> marmite ~/.local/bin/</code></pre>
+</li>
+<li>
+<p>Make sure the binary is executable (Linux/macOS):</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>chmod</a-f> +x /usr/local/bin/marmite</code></pre>
+</li>
+</ol>
+<h2><a href="#platform-specific-installation" aria-hidden="true" class="anchor" id="platform-specific-installation"></a>Platform-Specific Installation</h2>
+<h3><a href="#brew" aria-hidden="true" class="anchor" id="brew"></a>brew</h3>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>brew</a-f> install marmite</code></pre>
+<h3><a href="#linux" aria-hidden="true" class="anchor" id="linux"></a>Linux</h3>
+<h4><a href="#arch-linux" aria-hidden="true" class="anchor" id="arch-linux"></a>Arch Linux</h4>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>yay</a-f> <a-co>-S</a-co> marmite-bin</code></pre>
+<h3><a href="#freebsd" aria-hidden="true" class="anchor" id="freebsd"></a>FreeBSD</h3>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>pkg</a-f> install marmite</code></pre>
+<p>For other Linux distributions, use the automated install script or download the binary manually from the releases page.</p>
+<h3><a href="#windows" aria-hidden="true" class="anchor" id="windows"></a>Windows</h3>
+<ol>
+<li>Download the Windows binary from the <a href="https://github.com/rochacbruno/marmite/releases/latest">releases page</a></li>
+<li>Extract the ZIP file</li>
+<li>Add the directory containing <code>marmite.exe</code> to your PATH</li>
+</ol>
+<p>Or use PowerShell:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-powershell"><a-f>iwr</a-f> -useb https://marmite.blog/install.ps1 | <a-f>iex</a-f></code></pre>
+<h2><a href="#docker" aria-hidden="true" class="anchor" id="docker"></a>Docker</h2>
+<p>Run Marmite using Docker:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>docker</a-f> run <a-co>-v</a-co> <a-o>$</a-o><a-pr>PWD</a-pr>:/input ghcr.io/rochacbruno/marmite
+<a-c># OR</a-c>
+<a-f>docker</a-f> run <a-co>-p</a-co> 8000:8000 <a-co>-v</a-co> <a-o>$</a-o><a-pr>PWD</a-pr>:/input ghcr.io/rochacbruno/marmite <a-co>--serve</a-co></code></pre>
+<h2><a href="#verify-installation" aria-hidden="true" class="anchor" id="verify-installation"></a>Verify Installation</h2>
+<p>After installation, verify that Marmite is working:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>marmite</a-f> <a-co>--version</a-co></code></pre>
+<p>You should see output like:</p>
+<pre class="marmite-code"><code class="marmite-code-inner">marmite 0.2.6
+</code></pre>
+<h2><a href="#updating-marmite" aria-hidden="true" class="anchor" id="updating-marmite"></a>Updating Marmite</h2>
+<p>To update to the latest version:</p>
+<h3><a href="#using-the-install-script" aria-hidden="true" class="anchor" id="using-the-install-script"></a>Using the install script</h3>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>curl</a-f> <a-co>-sS</a-co> https://marmite.blog/install.sh <a-o>|</a-o> <a-f>sh</a-f> <a-co>-s</a-co> <a-co>--</a-co> <a-co>--force</a-co></code></pre>
+<h3><a href="#using-cargo" aria-hidden="true" class="anchor" id="using-cargo"></a>Using cargo</h3>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>cargo</a-f> install <a-co>--force</a-co> marmite</code></pre>
+<h2><a href="#troubleshooting" aria-hidden="true" class="anchor" id="troubleshooting"></a>Troubleshooting</h2>
+<h3><a href="#command-not-found" aria-hidden="true" class="anchor" id="command-not-found"></a>Command not found</h3>
+<p>If you get a &quot;command not found&quot; error, make sure the installation directory is in your PATH:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-c># Add to ~/.bashrc or ~/.zshrc</a-c>
+<a-k>export</a-k> <a-pr>PATH</a-pr>=<a-s>&quot;</a-s><a-o>$</a-o><a-pr>HOME</a-pr><a-s>/.local/bin:</a-s><a-o>$</a-o><a-pr>PATH</a-pr><a-s>&quot;</a-s></code></pre>
+<p>Then reload your shell configuration:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>source</a-f> ~/.bashrc  <a-c># or ~/.zshrc</a-c></code></pre>
+<h3><a href="#permission-denied" aria-hidden="true" class="anchor" id="permission-denied"></a>Permission denied</h3>
+<p>If you get permission errors during installation:</p>
+<ul>
+<li>Use the <code>--bin-dir</code> option to install to a user-writable directory</li>
+<li>Or run the install command with <code>sudo</code> (not recommended)</li>
+</ul>
+<h3><a href="#ssltls-errors" aria-hidden="true" class="anchor" id="ssltls-errors"></a>SSL/TLS errors</h3>
+<p>If you encounter SSL errors when downloading:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-c># Use wget instead of curl</a-c>
+<a-f>wget</a-f> <a-co>-O-</a-co> https://marmite.blog/install.sh <a-o>|</a-o> <a-f>sh</a-f></code></pre>
+<h2><a href="#next-steps" aria-hidden="true" class="anchor" id="next-steps"></a>Next Steps</h2>
+<p>Once Marmite is installed, you can:</p>
+<ol>
+<li>
+<p>Create your first site:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>marmite</a-f> myblog <a-co>--init-site</a-co> <a-co>--name</a-co> <a-s>&quot;My Blog&quot;</a-s></code></pre>
+</li>
+<li>
+<p>Create your first post:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>marmite</a-f> myblog <a-co>--new</a-co> <a-s>&quot;Hello World&quot;</a-s></code></pre>
+</li>
+<li>
+<p>Build and serve your site:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-f>marmite</a-f> myblog <a-co>--build</a-co> <a-co>--serve</a-co></code></pre>
+</li>
+</ol>
+<p>Check out the <a href="getting-started.html">Getting Started</a> guide for a complete tutorial!</p>
+<h2><a href="#uninstalling" aria-hidden="true" class="anchor" id="uninstalling"></a>Uninstalling</h2>
+<p>To uninstall Marmite:</p>
+<pre class="marmite-code"><code class="marmite-code-inner language-bash"><a-c># If installed with the script</a-c>
+<a-f>rm</a-f> ~/.local/bin/marmite
+
+<a-c># If installed with cargo</a-c>
+<a-f>cargo</a-f> uninstall marmite
+
+<a-c># If installed manually</a-c>
+<a-f>rm</a-f> /usr/local/bin/marmite</code></pre>
+<!-- Content Injected to every content markdown footer -->
+]]></content:encoded></item></channel></rss>
