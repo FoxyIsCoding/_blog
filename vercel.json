@@ -1,8 +1,5 @@
 {
   "buildCommand": "pip install marmite && marmite . site",
   "outputDirectory": "site",
-  "framework": "static",
-  "python": {
-    "version": "3.11"
-  }
+  "framework": "static"
 }
